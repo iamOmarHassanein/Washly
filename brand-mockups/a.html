@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#FFFFFF; font-family:'Inter',sans-serif; overflow:hidden; position:relative; }
+  .frame { position:absolute; inset:0; padding:88px 96px; display:flex; flex-direction:column; }
+  .top { display:flex; justify-content:space-between; align-items:center; }
+  .wordmark { font-family:'Archivo'; font-weight:900; font-size:44px; letter-spacing:0.06em; color:#15181A; }
+  .wordmark span { color:#A8D42A; }
+  .mtl { font-family:'Archivo'; font-weight:700; font-size:26px; color:#15181A; background:#C9F53C; padding:10px 26px; border-radius:100px; letter-spacing:0.08em; }
+  .headline { font-family:'Archivo'; font-weight:900; font-size:148px; line-height:1.04; color:#15181A; letter-spacing:-0.02em; margin-top:170px; }
+  .hl { position:relative; display:inline-block; padding:0 22px; }
+  .hl::before { content:''; position:absolute; inset:6px -6px 2px -6px; background:#C9F53C; border-radius:14px; transform:rotate(-1.2deg); z-index:-1; }
+  .sub { font-size:40px; font-weight:500; color:#5A6157; margin-top:64px; line-height:1.45; max-width:760px; }
+  .ticks { margin-top:78px; display:flex; gap:28px; }
+  .tick { display:flex; align-items:center; gap:14px; font-weight:600; font-size:28px; color:#15181A; background:#F2F6E8; border-radius:100px; padding:18px 34px; }
+  .dot { width:16px; height:16px; border-radius:50%; background:#A8D42A; }
+  .bottom { margin-top:auto; display:flex; justify-content:space-between; align-items:center; }
+  .cta { font-family:'Archivo'; font-weight:800; font-size:38px; color:#15181A; background:#C9F53C; padding:30px 58px; border-radius:100px; }
+  .handle { font-size:28px; font-weight:500; color:#98A08F; }
+  .wbig { position:absolute; right:-140px; top:290px; font-family:'Archivo'; font-weight:900; font-size:560px; color:#F4F8EA; z-index:-2; line-height:1; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="top">
+      <div class="wordmark">WASHLY<span>.</span></div>
+      <div class="mtl">MTL</div>
+    </div>
+    <div class="wbig">W</div>
+    <div class="headline">Your<br>weekend,<br><span class="hl">back.</span></div>
+    <div class="sub">Laundry picked up, washed, folded &amp; delivered in 24 hours.</div>
+    <div class="ticks">
+      <div class="tick"><div class="dot"></div>Free pickup</div>
+      <div class="tick"><div class="dot"></div>24h turnaround</div>
+    </div>
+    <div class="bottom">
+      <div class="cta">Book your pickup &rarr;</div>
+      <div class="handle">@washly.mtl</div>
+    </div>
+  </div>
+</body>
+</html>

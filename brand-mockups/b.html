@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; height:1350px; background:#FFFFFF; font-family:'Inter',sans-serif; overflow:hidden; position:relative; }
+  .bubble { position:absolute; border-radius:50%; }
+  .b1 { width:420px; height:420px; background:#E4FAF9; right:-130px; top:-130px; }
+  .b2 { width:180px; height:180px; background:#EFFBD8; right:210px; top:210px; }
+  .b3 { width:260px; height:260px; background:#E4FAF9; left:-90px; bottom:120px; }
+  .frame { position:absolute; inset:0; padding:88px 96px; display:flex; flex-direction:column; }
+  .top { display:flex; justify-content:space-between; align-items:center; }
+  .wordmark { font-family:'Outfit'; font-weight:900; font-size:44px; letter-spacing:0.05em; color:#0B2B33; }
+  .wordmark span { color:#00C6C2; }
+  .badge { font-family:'Outfit'; font-weight:700; font-size:24px; color:#0B2B33; border:3px solid #00C6C2; padding:10px 26px; border-radius:100px; letter-spacing:0.06em; }
+  .headline { font-family:'Outfit'; font-weight:900; font-size:140px; line-height:1.05; color:#0B2B33; letter-spacing:-0.015em; margin-top:180px; }
+  .aqua { color:#00A5A1; }
+  .sub { font-size:40px; font-weight:500; color:#4A6068; margin-top:60px; line-height:1.45; max-width:780px; }
+  .steps { margin-top:80px; display:flex; gap:20px; align-items:center; font-family:'Outfit'; font-weight:700; font-size:30px; color:#0B2B33; }
+  .step { background:#E4FAF9; padding:20px 36px; border-radius:100px; }
+  .arrow { color:#00C6C2; font-size:36px; }
+  .bottom { margin-top:auto; display:flex; justify-content:space-between; align-items:center; }
+  .cta { font-family:'Outfit'; font-weight:800; font-size:38px; color:#0B2B33; background:#B8F03A; padding:30px 58px; border-radius:100px; }
+  .handle { font-size:28px; font-weight:500; color:#8FA3AA; }
+</style>
+</head>
+<body>
+  <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+  <div class="frame">
+    <div class="top">
+      <div class="wordmark">WASHLY<span>.</span></div>
+      <div class="badge">MONTREAL</div>
+    </div>
+    <div class="headline">Fresh in<br><span class="aqua">24 hours.</span></div>
+    <div class="sub">Your laundry, picked up and delivered back crisp. You never touch a machine.</div>
+    <div class="steps">
+      <div class="step">Book</div><div class="arrow">&rarr;</div>
+      <div class="step">We pick up</div><div class="arrow">&rarr;</div>
+      <div class="step">Fresh in 24h</div>
+    </div>
+    <div class="bottom">
+      <div class="cta">Get your first pickup &rarr;</div>
+      <div class="handle">@washly.mtl</div>
+    </div>
+  </div>
+</body>
+</html>
