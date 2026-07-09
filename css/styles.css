@@ -668,6 +668,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 
 /* ── Contact ─────────────────────────────── */
 .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 900px; margin: 0 auto; }
+.contact-cards-single { grid-template-columns: 1fr; max-width: 420px; }
 .contact-card {
   display: flex; flex-direction: column; align-items: center; gap: 6px;
   background: var(--white); border-radius: var(--radius); padding: 34px 24px;
