@@ -101,14 +101,12 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 .navbar {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
   padding: 18px 0;
-  transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+  transition: padding .3s ease, background .3s ease, box-shadow .3s ease;
 }
 .navbar.scrolled {
   padding: 10px 0;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 6px 24px rgba(21,24,26,.08);
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(21,24,26,.10);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 
@@ -827,7 +825,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
   .nav-overlay {
     position: fixed; inset: 0; background: rgba(8, 10, 11, 0.55);
     opacity: 0; visibility: hidden;
-    transition: opacity .35s ease, visibility .35s ease; z-index: 100;
+    transition: opacity .35s ease, visibility .35s ease; z-index: 95;
   }
   .nav-overlay.open { opacity: 1; visibility: visible; }
   body.menu-open { overflow: hidden; }
