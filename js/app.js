@@ -19,17 +19,21 @@
   /* ── Mobile menu ─────────────────────────── */
   const burger = document.getElementById("navBurger");
   const navLinks = document.getElementById("navLinks");
-  burger.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
+  const navOverlay = document.getElementById("navOverlay");
+  const setMenu = (open) => {
+    navLinks.classList.toggle("open", open);
     burger.classList.toggle("open", open);
+    if (navOverlay) navOverlay.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
     burger.setAttribute("aria-expanded", String(open));
-  });
+  };
+  burger.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
   navLinks.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
-      navLinks.classList.remove("open");
-      burger.classList.remove("open");
-      burger.setAttribute("aria-expanded", "false");
-    }
+    if (e.target.tagName === "A") setMenu(false);
+  });
+  if (navOverlay) navOverlay.addEventListener("click", () => setMenu(false));
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navLinks.classList.contains("open")) setMenu(false);
   });
 
   /* ── Bubble generator ────────────────────── */
