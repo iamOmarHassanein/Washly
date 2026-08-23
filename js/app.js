@@ -36,6 +36,39 @@
     if (e.key === "Escape" && navLinks.classList.contains("open")) setMenu(false);
   });
 
+  /* ── Language toggle (EN / FR) ───────────── */
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    const nodes = document.querySelectorAll("[data-fr]");
+    const meta = document.querySelector('meta[name="description"]');
+    const TITLE = {
+      en: document.title,
+      fr: "Washly MTL — Collecte et livraison de lessive à Montréal | Prêt en 24 h",
+    };
+    const DESC = {
+      en: meta ? meta.content : "",
+      fr: "Washly récupère, lave, plie et livre votre lessive partout à Montréal en 24 heures. Assuré, écologique et suivi de porte à porte. Sac standard 34,99 $, grand sac 39,99 $ — ou économisez avec un forfait mensuel.",
+    };
+    const applyLang = (lang) => {
+      nodes.forEach((el) => {
+        if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+        el.innerHTML = lang === "fr" ? el.dataset.fr : el.dataset.en;
+      });
+      document.documentElement.lang = lang;
+      document.title = TITLE[lang];
+      if (meta) meta.content = DESC[lang];
+      langToggle.textContent = lang === "fr" ? "EN" : "FR";
+      langToggle.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
+      try { localStorage.setItem("washly-lang", lang); } catch (e) {}
+    };
+    let saved = "en";
+    try { saved = localStorage.getItem("washly-lang") || "en"; } catch (e) {}
+    if (saved === "fr") applyLang("fr");
+    langToggle.addEventListener("click", () => {
+      applyLang(document.documentElement.lang === "fr" ? "en" : "fr");
+    });
+  }
+
   /* ── Bubble generator ────────────────────── */
   function spawnBubbles(containerId, count, opts = {}) {
     const el = document.getElementById(containerId);

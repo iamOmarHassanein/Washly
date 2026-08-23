@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
 <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
@@ -23,15 +23,16 @@
       <span class="brand-name">Wash<em>ly</em></span>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#how">How it works</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#trust">Why Washly</a>
-      <a href="#b2b">Business</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a href="#download" class="btn btn-primary nav-cta">Download App</a>
+      <a href="#how" data-fr="Fonctionnement">How it works</a>
+      <a href="#services" data-fr="Services">Services</a>
+      <a href="#pricing" data-fr="Tarifs">Pricing</a>
+      <a href="#trust" data-fr="Pourquoi Washly">Why Washly</a>
+      <a href="#b2b" data-fr="Entreprises">Business</a>
+      <a href="#faq" data-fr="FAQ">FAQ</a>
+      <a href="#contact" data-fr="Contact">Contact</a>
+      <a href="#download" class="btn btn-primary nav-cta" data-fr="Télécharger l'app">Download App</a>
     </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Passer en français">FR</button>
     <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -47,30 +48,30 @@
 
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="hero-pill reveal">
+      <div class="hero-pill reveal" data-fr="<span class='pill-dot'></span> 🧺 Maintenant partout à Montréal">
         <span class="pill-dot"></span> 🧺 Now serving all of Montréal
       </div>
-      <h1 class="reveal d1">Your laundry,<br><span class="grad-text">done in 24 hours.</span></h1>
-      <p class="hero-sub reveal d2">We pick up, wash, fold, and deliver back to your door — <strong>fresh and ready within 24 hours</strong>. No trips to the laundromat. Ever again.</p>
+      <h1 class="reveal d1" data-fr="Votre lessive,<br><span class='grad-text'>prête en 24 heures.</span>">Your laundry,<br><span class="grad-text">done in 24 hours.</span></h1>
+      <p class="hero-sub reveal d2" data-fr="On récupère, lave, plie et rapporte tout à votre porte — <strong>frais et prêt en 24 heures</strong>. Fini la buanderie. Pour de bon.">We pick up, wash, fold, and deliver back to your door — <strong>fresh and ready within 24 hours</strong>. No trips to the laundromat. Ever again.</p>
       <div class="hero-ctas reveal d3">
-        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-fr="Télécharger l'app <svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M5 12h14M13 6l6 6-6 6' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
           Download the App
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+        <a href="#how" class="btn btn-ghost btn-lg" data-fr="Voir comment ça marche">See how it works</a>
       </div>
       <div class="hero-trust reveal d4">
         <div class="trust-item">
           <span class="trust-stars">★★★★★</span>
-          <span>5-star rated service</span>
+          <span data-fr="Service 5 étoiles">5-star rated service</span>
         </div>
         <div class="trust-sep"></div>
         <div class="trust-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Insured &amp; safe</span>
+          <span data-fr="Assuré et sécurisé">Insured &amp; safe</span>
         </div>
         <div class="trust-sep"></div>
-        <div class="trust-item">⚡ <span>24h turnaround</span></div>
+        <div class="trust-item">⚡ <span data-fr="Délai de 24h">24h turnaround</span></div>
       </div>
     </div>
 
@@ -83,15 +84,15 @@
         </div>
         <div class="float-card float-card-a">
           <span class="fc-emoji">🧺</span>
-          <div><strong>Pickup booked</strong><small>Today · 5–8 PM</small></div>
+          <div><strong data-fr="Collecte réservée">Pickup booked</strong><small data-fr="Aujourd'hui · 17h–20h">Today · 5–8 PM</small></div>
         </div>
         <div class="float-card float-card-b">
           <span class="fc-emoji">✨</span>
-          <div><strong>Delivered fresh</strong><small>in 24 hours</small></div>
+          <div><strong data-fr="Livré frais">Delivered fresh</strong><small data-fr="en 24 heures">in 24 hours</small></div>
         </div>
         <div class="float-card float-card-c">
           <span class="fc-emoji">🌿</span>
-          <div><strong>Eco-friendly</strong><small>premium detergents</small></div>
+          <div><strong data-fr="Écologique">Eco-friendly</strong><small data-fr="détergents premium">premium detergents</small></div>
         </div>
       </div>
     </div>
@@ -105,20 +106,20 @@
 <!-- ══════════════ MARQUEE ══════════════ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>✅ 24-hour turnaround</span><i>✦</i>
-    <span>🛡️ Fully insured</span><i>✦</i>
-    <span>⭐ 5-star service</span><i>✦</i>
-    <span>🧺 Professional wash &amp; fold</span><i>✦</i>
-    <span>📍 Serving all of Montréal</span><i>✦</i>
-    <span>❌ No subscriptions required</span><i>✦</i>
-    <span>🇨🇦 Montréal-based team</span><i>✦</i>
-    <span>✅ 24-hour turnaround</span><i>✦</i>
-    <span>🛡️ Fully insured</span><i>✦</i>
-    <span>⭐ 5-star service</span><i>✦</i>
-    <span>🧺 Professional wash &amp; fold</span><i>✦</i>
-    <span>📍 Serving all of Montréal</span><i>✦</i>
-    <span>❌ No subscriptions required</span><i>✦</i>
-    <span>🇨🇦 Montréal-based team</span><i>✦</i>
+    <span data-fr="✅ Délai de 24 heures">✅ 24-hour turnaround</span><i>✦</i>
+    <span data-fr="🛡️ Entièrement assuré">🛡️ Fully insured</span><i>✦</i>
+    <span data-fr="⭐ Service 5 étoiles">⭐ 5-star service</span><i>✦</i>
+    <span data-fr="🧺 Lavage et pliage pro">🧺 Professional wash &amp; fold</span><i>✦</i>
+    <span data-fr="📍 Partout à Montréal">📍 Serving all of Montréal</span><i>✦</i>
+    <span data-fr="❌ Sans abonnement obligatoire">❌ No subscriptions required</span><i>✦</i>
+    <span data-fr="🇨🇦 Équipe montréalaise">🇨🇦 Montréal-based team</span><i>✦</i>
+    <span data-fr="✅ Délai de 24 heures">✅ 24-hour turnaround</span><i>✦</i>
+    <span data-fr="🛡️ Entièrement assuré">🛡️ Fully insured</span><i>✦</i>
+    <span data-fr="⭐ Service 5 étoiles">⭐ 5-star service</span><i>✦</i>
+    <span data-fr="🧺 Lavage et pliage pro">🧺 Professional wash &amp; fold</span><i>✦</i>
+    <span data-fr="📍 Partout à Montréal">📍 Serving all of Montréal</span><i>✦</i>
+    <span data-fr="❌ Sans abonnement obligatoire">❌ No subscriptions required</span><i>✦</i>
+    <span data-fr="🇨🇦 Équipe montréalaise">🇨🇦 Montréal-based team</span><i>✦</i>
   </div>
 </div>
 
@@ -126,45 +127,45 @@
 <section class="section" id="how">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">How it works</span>
-      <h2>Four steps to <span class="grad-text">freedom.</span></h2>
-      <p>It really is that simple.</p>
+      <span class="eyebrow" data-fr="Fonctionnement">How it works</span>
+      <h2 data-fr="Quatre étapes vers la <span class='grad-text'>liberté.</span>">Four steps to <span class="grad-text">freedom.</span></h2>
+      <p data-fr="C'est vraiment aussi simple.">It really is that simple.</p>
     </div>
     <div class="steps steps-4">
       <article class="step-card reveal">
         <div class="step-num">1</div>
         <div class="step-mascot"><img src="assets/step-order.png" alt="Washy holding a phone with the Washly app" loading="lazy"></div>
-        <h3>Place Your Order</h3>
-        <p>Pick your bag size, choose a pickup date and time window. Takes less than 2 minutes.</p>
+        <h3 data-fr="Passez votre commande">Place Your Order</h3>
+        <p data-fr="Choisissez la taille du sac, la date et la plage horaire de collecte. Moins de 2 minutes.">Pick your bag size, choose a pickup date and time window. Takes less than 2 minutes.</p>
       </article>
       <article class="step-card reveal d1">
         <div class="step-num">2</div>
         <div class="step-mascot"><img src="assets/step-pickup.png" alt="Washy running with a laundry bag" loading="lazy"></div>
-        <h3>We Come to You</h3>
-        <p>Our driver arrives at your door during your chosen time window and collects your laundry bag.</p>
+        <h3 data-fr="On vient chez vous">We Come to You</h3>
+        <p data-fr="Notre chauffeur se présente à votre porte pendant la plage choisie et récupère votre sac.">Our driver arrives at your door during your chosen time window and collects your laundry bag.</p>
       </article>
       <article class="step-card reveal d2">
         <div class="step-num">3</div>
         <div class="step-mascot"><img src="assets/step-clean.png" alt="Washy next to a washing machine" loading="lazy"></div>
-        <h3>Expert Wash &amp; Fold</h3>
-        <p>Your clothes are washed with premium eco-friendly detergents, dried, and folded with care.</p>
+        <h3 data-fr="Lavage et pliage experts">Expert Wash &amp; Fold</h3>
+        <p data-fr="Vos vêtements sont lavés avec des détergents écologiques premium, séchés et pliés avec soin.">Your clothes are washed with premium eco-friendly detergents, dried, and folded with care.</p>
       </article>
       <article class="step-card reveal d3">
         <div class="step-num">4</div>
         <div class="step-mascot"><img src="assets/step-deliver.png" alt="Washy presenting freshly folded towels" loading="lazy"></div>
-        <h3>Delivered Back to You</h3>
-        <p>Clean, fresh, folded laundry delivered back to your door within 24 hours of pickup. Every time.</p>
+        <h3 data-fr="Livré à votre porte">Delivered Back to You</h3>
+        <p data-fr="Linge propre, frais et plié, rapporté à votre porte en 24 heures. À chaque fois.">Clean, fresh, folded laundry delivered back to your door within 24 hours of pickup. Every time.</p>
       </article>
     </div>
     <div class="included reveal d2">
-      <h3>Included with every order</h3>
+      <h3 data-fr="Inclus avec chaque commande">Included with every order</h3>
       <div class="included-chips">
-        <span>✓ Wash, dry &amp; fold</span>
-        <span>✓ Premium eco-friendly detergents</span>
-        <span>✓ Contactless pickup &amp; delivery</span>
-        <span>✓ Real-time order tracking</span>
-        <span>✓ 24-hour turnaround guaranteed</span>
-        <span>✓ Insured handling</span>
+        <span data-fr="✓ Lavage, séchage et pliage">✓ Wash, dry &amp; fold</span>
+        <span data-fr="✓ Détergents écologiques premium">✓ Premium eco-friendly detergents</span>
+        <span data-fr="✓ Collecte et livraison sans contact">✓ Contactless pickup &amp; delivery</span>
+        <span data-fr="✓ Suivi de commande en temps réel">✓ Real-time order tracking</span>
+        <span data-fr="✓ Délai de 24 heures garanti">✓ 24-hour turnaround guaranteed</span>
+        <span data-fr="✓ Manipulation assurée">✓ Insured handling</span>
       </div>
     </div>
   </div>
@@ -175,58 +176,58 @@
   <div class="bubbles bubbles-soft" id="serviceBubbles" aria-hidden="true"></div>
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow eyebrow-light">What we clean</span>
-      <h2 class="on-dark">Professional wash &amp; fold. <span class="grad-text">Done right.</span></h2>
-      <p class="on-dark-sub">Everyday clothing, bed linens, towels and more — washed, dried and folded by a Montréal-based team that cares.</p>
+      <span class="eyebrow eyebrow-light" data-fr="Ce qu'on nettoie">What we clean</span>
+      <h2 class="on-dark" data-fr="Lavage et pliage pro. <span class='grad-text'>Bien fait.</span>">Professional wash &amp; fold. <span class="grad-text">Done right.</span></h2>
+      <p class="on-dark-sub" data-fr="Vêtements du quotidien, draps, serviettes et plus — lavés, séchés et pliés par une équipe montréalaise attentionnée.">Everyday clothing, bed linens, towels and more — washed, dried and folded by a Montréal-based team that cares.</p>
     </div>
     <div class="bento">
       <article class="bento-card bento-lg tilt reveal">
         <div class="bento-icon">🧺</div>
-        <h3>Wash &amp; Fold</h3>
-        <p>Our core service: your laundry washed at the right temperature with premium eco-friendly detergents, dried gently and folded with care. Everyday clothing, bed linens, towels and similar items all welcome.</p>
-        <span class="bento-tag">Every order · 24h turnaround</span>
+        <h3 data-fr="Lavage et pliage">Wash &amp; Fold</h3>
+        <p data-fr="Notre service principal : votre linge lavé à la bonne température avec des détergents écologiques premium, séché en douceur et plié avec soin. Vêtements du quotidien, draps, serviettes et articles similaires bienvenus.">Our core service: your laundry washed at the right temperature with premium eco-friendly detergents, dried gently and folded with care. Everyday clothing, bed linens, towels and similar items all welcome.</p>
+        <span class="bento-tag" data-fr="Chaque commande · délai 24h">Every order · 24h turnaround</span>
         <div class="bento-shine"></div>
       </article>
       <article class="bento-card tilt reveal d1">
         <div class="bento-icon">👕</div>
-        <h3>Standard Bag</h3>
-        <p>Holds ≈ 20 lbs / 9 kg — perfect for a week of everyday clothing.</p>
-        <span class="bento-tag">$34.99 flat</span>
+        <h3 data-fr="Sac standard">Standard Bag</h3>
+        <p data-fr="Contient ≈ 9 kg / 20 lb — parfait pour une semaine de vêtements.">Holds ≈ 20 lbs / 9 kg — perfect for a week of everyday clothing.</p>
+        <span class="bento-tag" data-fr="34,99 $ forfaitaire">$34.99 flat</span>
         <div class="bento-shine"></div>
       </article>
       <article class="bento-card tilt reveal d2">
         <div class="bento-icon">🛏️</div>
-        <h3>Large Bag</h3>
-        <p>Holds ≈ 30 lbs / 14 kg — ideal for families or bulkier items like sheets and towels.</p>
-        <span class="bento-tag">$39.99 flat · Best value</span>
+        <h3 data-fr="Grand sac">Large Bag</h3>
+        <p data-fr="Contient ≈ 14 kg / 30 lb — idéal pour les familles ou les articles volumineux comme les draps et serviettes.">Holds ≈ 30 lbs / 14 kg — ideal for families or bulkier items like sheets and towels.</p>
+        <span class="bento-tag" data-fr="39,99 $ forfaitaire · Meilleure valeur">$39.99 flat · Best value</span>
         <div class="bento-shine"></div>
       </article>
       <article class="bento-card tilt reveal d3">
         <div class="bento-icon">🌿</div>
-        <h3>Eco-Friendly Detergents</h3>
-        <p>Premium, biodegradable detergents — tough on stains, gentle on fabric. Standard on every order.</p>
-        <span class="bento-tag">Always included</span>
+        <h3 data-fr="Détergents écologiques">Eco-Friendly Detergents</h3>
+        <p data-fr="Détergents premium et biodégradables — efficaces sur les taches, doux pour les tissus. Inclus par défaut.">Premium, biodegradable detergents — tough on stains, gentle on fabric. Standard on every order.</p>
+        <span class="bento-tag" data-fr="Toujours inclus">Always included</span>
         <div class="bento-shine"></div>
       </article>
       <article class="bento-card tilt reveal d4">
         <div class="bento-icon">📍</div>
-        <h3>Live Tracking</h3>
-        <p>Follow every order in real time: Picked Up → Cleaning → Out for Delivery → Delivered.</p>
-        <span class="bento-tag">Every step, live</span>
+        <h3 data-fr="Suivi en direct">Live Tracking</h3>
+        <p data-fr="Suivez chaque commande en temps réel : Récupéré → Lavage → En livraison → Livré.">Follow every order in real time: Picked Up → Cleaning → Out for Delivery → Delivered.</p>
+        <span class="bento-tag" data-fr="Chaque étape, en direct">Every step, live</span>
         <div class="bento-shine"></div>
       </article>
     </div>
-    <p class="services-note reveal d3">Heads-up: we don't accept dry-clean-only garments, leather or suede, or heavily soiled items needing special treatment — everything else, bring it on.</p>
+    <p class="services-note reveal d3" data-fr="À noter : nous n'acceptons pas les vêtements nettoyage à sec uniquement, le cuir ou le daim, ni les articles très souillés nécessitant un traitement spécial — tout le reste, on s'en occupe.">Heads-up: we don't accept dry-clean-only garments, leather or suede, or heavily soiled items needing special treatment — everything else, bring it on.</p>
   </div>
 </section>
 
 <!-- ══════════════ STATS ══════════════ -->
 <section class="stats-band">
   <div class="container stats-grid">
-    <div class="stat reveal"><span class="stat-num" data-count="24" data-suffix="h">0</span><small>guaranteed turnaround</small></div>
-    <div class="stat reveal d1"><span class="stat-num" data-count="45" data-suffix="%">0</span><small>savings with monthly plans</small></div>
-    <div class="stat reveal d2"><span class="stat-num" data-count="7" data-suffix="/7">0</span><small>days of support, 9AM–9PM</small></div>
-    <div class="stat reveal d3"><span class="stat-num" data-count="100" data-suffix="%">0</span><small>insured &amp; tracked</small></div>
+    <div class="stat reveal"><span class="stat-num" data-count="24" data-suffix="h">0</span><small data-fr="délai garanti">guaranteed turnaround</small></div>
+    <div class="stat reveal d1"><span class="stat-num" data-count="45" data-suffix="%">0</span><small data-fr="d'économies avec les forfaits">savings with monthly plans</small></div>
+    <div class="stat reveal d2"><span class="stat-num" data-count="7" data-suffix="/7">0</span><small data-fr="jours de soutien, 9h–21h">days of support, 9AM–9PM</small></div>
+    <div class="stat reveal d3"><span class="stat-num" data-count="100" data-suffix="%">0</span><small data-fr="assuré et suivi">insured &amp; tracked</small></div>
   </div>
 </section>
 
@@ -234,25 +235,25 @@
 <section class="section" id="trust">
   <div class="container trust-grid">
     <div class="trust-copy">
-      <span class="eyebrow reveal">Why Washly</span>
-      <h2 class="reveal d1">Built for <span class="grad-text">busy Montrealers.</span></h2>
-      <p class="reveal d2">Handing over your favourite clothes takes trust. Every Washly order is insured from the moment we pick it up to the moment we deliver — and you can watch it move through every step, live.</p>
+      <span class="eyebrow reveal" data-fr="Pourquoi Washly">Why Washly</span>
+      <h2 class="reveal d1" data-fr="Pensé pour les <span class='grad-text'>Montréalais pressés.</span>">Built for <span class="grad-text">busy Montrealers.</span></h2>
+      <p class="reveal d2" data-fr="Confier ses vêtements préférés demande de la confiance. Chaque commande Washly est assurée de la collecte à la livraison — et vous suivez chaque étape en direct.">Handing over your favourite clothes takes trust. Every Washly order is insured from the moment we pick it up to the moment we deliver — and you can watch it move through every step, live.</p>
       <ul class="trust-list">
         <li class="reveal d1">
           <span class="tl-icon">🛡️</span>
-          <div><strong>Fully insured</strong><p>Your clothes are covered from pickup to delivery. If anything ever goes wrong, we make it right.</p></div>
+          <div><strong data-fr="Entièrement assuré">Fully insured</strong><p data-fr="Vos vêtements sont couverts de la collecte à la livraison. Le moindre problème, on le règle.">Your clothes are covered from pickup to delivery. If anything ever goes wrong, we make it right.</p></div>
         </li>
         <li class="reveal d2">
           <span class="tl-icon">📍</span>
-          <div><strong>Real-time tracking</strong><p>Watch your order move through every step — picked up, cleaning, out for delivery — live.</p></div>
+          <div><strong data-fr="Suivi en temps réel">Real-time tracking</strong><p data-fr="Suivez votre commande à chaque étape — récupéré, lavage, en livraison — en direct.">Watch your order move through every step — picked up, cleaning, out for delivery — live.</p></div>
         </li>
         <li class="reveal d3">
           <span class="tl-icon">🌿</span>
-          <div><strong>Eco-friendly detergents</strong><p>Premium, biodegradable detergents that are tough on stains and gentle on fabric.</p></div>
+          <div><strong data-fr="Détergents écologiques">Eco-friendly detergents</strong><p data-fr="Détergents premium et biodégradables, efficaces sur les taches et doux pour les tissus.">Premium, biodegradable detergents that are tough on stains and gentle on fabric.</p></div>
         </li>
         <li class="reveal d4">
           <span class="tl-icon">💬</span>
-          <div><strong>7-day support</strong><p>Real people, fast replies — Monday through Sunday, 9AM to 9PM. Average response under 15 minutes.</p></div>
+          <div><strong data-fr="Soutien 7 jours sur 7">7-day support</strong><p data-fr="De vraies personnes, des réponses rapides — du lundi au dimanche, de 9h à 21h. Réponse moyenne en moins de 15 minutes.">Real people, fast replies — Monday through Sunday, 9AM to 9PM. Average response under 15 minutes.</p></div>
         </li>
       </ul>
     </div>
@@ -261,14 +262,14 @@
         <div class="tc tc-main">
           <div class="tc-head">
             <span class="tc-avatar">W</span>
-            <div><strong>Order #MTL-8291</strong><small>Le Plateau · Standard bag</small></div>
-            <span class="tc-badge">On time</span>
+            <div><strong>Order #MTL-8291</strong><small data-fr="Le Plateau · Sac standard">Le Plateau · Standard bag</small></div>
+            <span class="tc-badge" data-fr="À l'heure">On time</span>
           </div>
           <div class="tc-timeline">
-            <div class="tc-step done"><i></i><span>Picked up — 6:04 PM</span></div>
-            <div class="tc-step done"><i></i><span>Cleaning — eco-friendly cycle</span></div>
-            <div class="tc-step done"><i></i><span>Folded &amp; quality checked</span></div>
-            <div class="tc-step active"><i></i><span>Out for delivery — arriving 5:30 PM</span></div>
+            <div class="tc-step done"><i></i><span data-fr="Récupéré — 18h04">Picked up — 6:04 PM</span></div>
+            <div class="tc-step done"><i></i><span data-fr="Lavage — cycle écologique">Cleaning — eco-friendly cycle</span></div>
+            <div class="tc-step done"><i></i><span data-fr="Plié et contrôlé">Folded &amp; quality checked</span></div>
+            <div class="tc-step active"><i></i><span data-fr="En livraison — arrivée 17h30">Out for delivery — arriving 5:30 PM</span></div>
           </div>
           <div class="tc-bar"><div class="tc-bar-fill"></div></div>
         </div>
@@ -283,84 +284,84 @@
 <section class="section section-mint" id="pricing">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Pricing</span>
-      <h2>Transparent pricing. <span class="grad-text">No surprises.</span></h2>
-      <p>Free pickup &amp; delivery on every order. No minimum — one bag is fine.</p>
+      <span class="eyebrow" data-fr="Tarifs">Pricing</span>
+      <h2 data-fr="Des prix transparents. <span class='grad-text'>Sans surprise.</span>">Transparent pricing. <span class="grad-text">No surprises.</span></h2>
+      <p data-fr="Collecte et livraison gratuites sur chaque commande. Aucun minimum — un seul sac suffit.">Free pickup &amp; delivery on every order. No minimum — one bag is fine.</p>
     </div>
 
-    <h3 class="pricing-subhead reveal">One-time orders</h3>
+    <h3 class="pricing-subhead reveal" data-fr="Commandes ponctuelles">One-time orders</h3>
     <div class="bag-grid">
       <article class="bag-card reveal">
         <div class="bag-img"><img src="assets/laundry-bag.png" alt="Washly laundry bag" loading="lazy"></div>
         <div class="bag-info">
-          <h3>Standard Bag</h3>
-          <p class="bag-weight">≈ 20 lbs / 9 kg</p>
-          <p class="bag-desc">Perfect for a week of everyday clothing.</p>
+          <h3 data-fr="Sac standard">Standard Bag</h3>
+          <p class="bag-weight" data-fr="≈ 9 kg / 20 lb">≈ 20 lbs / 9 kg</p>
+          <p class="bag-desc" data-fr="Parfait pour une semaine de vêtements.">Perfect for a week of everyday clothing.</p>
           <div class="bag-breakdown">
-            <div><span>Base price</span><span>$33.00</span></div>
-            <div><span>Service fee</span><span>$1.99</span></div>
-            <div class="bag-total"><span>Total</span><span>$34.99</span></div>
+            <div><span data-fr="Prix de base">Base price</span><span data-fr="33,00 $">$33.00</span></div>
+            <div><span data-fr="Frais de service">Service fee</span><span data-fr="1,99 $">$1.99</span></div>
+            <div class="bag-total"><span data-fr="Total">Total</span><span data-fr="34,99 $">$34.99</span></div>
           </div>
         </div>
       </article>
       <article class="bag-card bag-featured reveal d1">
-        <span class="price-flag">Best Value ✦</span>
+        <span class="price-flag" data-fr="Meilleure valeur ✦">Best Value ✦</span>
         <div class="bag-img bag-img-lg"><img src="assets/laundry-bag.png" alt="Washly large laundry bag" loading="lazy"></div>
         <div class="bag-info">
-          <h3>Large Bag</h3>
-          <p class="bag-weight">≈ 30 lbs / 14 kg</p>
-          <p class="bag-desc">Ideal for families or bulkier items like sheets and towels.</p>
+          <h3 data-fr="Grand sac">Large Bag</h3>
+          <p class="bag-weight" data-fr="≈ 14 kg / 30 lb">≈ 30 lbs / 14 kg</p>
+          <p class="bag-desc" data-fr="Idéal pour les familles ou les articles volumineux comme les draps et serviettes.">Ideal for families or bulkier items like sheets and towels.</p>
           <div class="bag-breakdown">
-            <div><span>Base price</span><span>$38.00</span></div>
-            <div><span>Service fee</span><span>$1.99</span></div>
-            <div class="bag-total"><span>Total</span><span>$39.99</span></div>
+            <div><span data-fr="Prix de base">Base price</span><span data-fr="38,00 $">$38.00</span></div>
+            <div><span data-fr="Frais de service">Service fee</span><span data-fr="1,99 $">$1.99</span></div>
+            <div class="bag-total"><span data-fr="Total">Total</span><span data-fr="39,99 $">$39.99</span></div>
           </div>
         </div>
       </article>
     </div>
-    <p class="pricing-fineprint reveal">Extended delivery +$4.99 for addresses over 30 minutes away — always shown before you confirm.</p>
+    <p class="pricing-fineprint reveal" data-fr="Livraison étendue +4,99 $ pour les adresses à plus de 30 minutes — toujours affichée avant confirmation.">Extended delivery +$4.99 for addresses over 30 minutes away — always shown before you confirm.</p>
 
-    <h3 class="pricing-subhead reveal">Save up to 45% with a monthly plan</h3>
+    <h3 class="pricing-subhead reveal" data-fr="Économisez jusqu'à 45 % avec un forfait mensuel">Save up to 45% with a monthly plan</h3>
     <div class="pricing-grid">
       <article class="price-card reveal">
-        <h3>Basic</h3>
-        <div class="price"><sup>$</sup>69.99<span>/mo</span></div>
-        <p class="price-sub">3 bags / month</p>
+        <h3 data-fr="Base">Basic</h3>
+        <div class="price" data-fr="<sup>$</sup>69,99<span>/mois</span>"><sup>$</sup>69.99<span>/mo</span></div>
+        <p class="price-sub" data-fr="3 sacs / mois">3 bags / month</p>
         <ul>
-          <li>3 pickups &amp; deliveries</li>
-          <li>Flexible scheduling</li>
-          <li>Large bags</li>
-          <li>Cancel anytime</li>
+          <li data-fr="3 collectes et livraisons">3 pickups &amp; deliveries</li>
+          <li data-fr="Horaire flexible">Flexible scheduling</li>
+          <li data-fr="Grands sacs">Large bags</li>
+          <li data-fr="Annulez à tout moment">Cancel anytime</li>
         </ul>
-        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download to Subscribe</a>
+        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-fr="Télécharger pour s'abonner">Download to Subscribe</a>
       </article>
       <article class="price-card price-featured reveal d1">
-        <span class="price-flag">Most Popular ✦</span>
-        <h3>Popular</h3>
-        <div class="price"><sup>$</sup>84.99<span>/mo</span></div>
-        <p class="price-sub">4 bags / month</p>
+        <span class="price-flag" data-fr="Le plus populaire ✦">Most Popular ✦</span>
+        <h3 data-fr="Populaire">Popular</h3>
+        <div class="price" data-fr="<sup>$</sup>84,99<span>/mois</span>"><sup>$</sup>84.99<span>/mo</span></div>
+        <p class="price-sub" data-fr="4 sacs / mois">4 bags / month</p>
         <ul>
-          <li>4 pickups &amp; deliveries</li>
-          <li>Flexible scheduling</li>
-          <li>Large bags</li>
-          <li>Cancel anytime</li>
+          <li data-fr="4 collectes et livraisons">4 pickups &amp; deliveries</li>
+          <li data-fr="Horaire flexible">Flexible scheduling</li>
+          <li data-fr="Grands sacs">Large bags</li>
+          <li data-fr="Annulez à tout moment">Cancel anytime</li>
         </ul>
-        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download to Subscribe</a>
+        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-fr="Télécharger pour s'abonner">Download to Subscribe</a>
       </article>
       <article class="price-card reveal d2">
-        <h3>Premium</h3>
-        <div class="price"><sup>$</sup>94.99<span>/mo</span></div>
-        <p class="price-sub">5 bags / month</p>
+        <h3 data-fr="Premium">Premium</h3>
+        <div class="price" data-fr="<sup>$</sup>94,99<span>/mois</span>"><sup>$</sup>94.99<span>/mo</span></div>
+        <p class="price-sub" data-fr="5 sacs / mois">5 bags / month</p>
         <ul>
-          <li>5 pickups &amp; deliveries</li>
-          <li>Flexible scheduling</li>
-          <li>Large bags</li>
-          <li>Cancel anytime</li>
+          <li data-fr="5 collectes et livraisons">5 pickups &amp; deliveries</li>
+          <li data-fr="Horaire flexible">Flexible scheduling</li>
+          <li data-fr="Grands sacs">Large bags</li>
+          <li data-fr="Annulez à tout moment">Cancel anytime</li>
         </ul>
-        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download to Subscribe</a>
+        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-fr="Télécharger pour s'abonner">Download to Subscribe</a>
       </article>
     </div>
-    <p class="pricing-fineprint reveal">All plans include professional wash &amp; fold, free pickup &amp; delivery, and 24-hour turnaround. Unused bags don't roll over — schedule pickups through the month to get the most from your plan.</p>
+    <p class="pricing-fineprint reveal" data-fr="Tous les forfaits incluent le lavage et pliage professionnel, la collecte et livraison gratuites et le délai de 24 heures. Les sacs inutilisés ne sont pas reportés — planifiez vos collectes durant le mois pour en profiter pleinement.">All plans include professional wash &amp; fold, free pickup &amp; delivery, and 24-hour turnaround. Unused bags don't roll over — schedule pickups through the month to get the most from your plan.</p>
   </div>
 </section>
 
@@ -368,46 +369,46 @@
 <section class="section section-dark" id="reviews">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow eyebrow-light">★ 5.0 on Google</span>
-      <h2 class="on-dark">Montrealers <span class="grad-text">love Washly.</span></h2>
+      <span class="eyebrow eyebrow-light" data-fr="★ 5,0 sur Google">★ 5.0 on Google</span>
+      <h2 class="on-dark" data-fr="Les Montréalais <span class='grad-text'>adorent Washly.</span>">Montrealers <span class="grad-text">love Washly.</span></h2>
     </div>
     <div class="slider reveal" id="slider">
       <div class="slider-track" id="sliderTrack">
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Very great service. They are fast, easy to communicate and very efficient. The price seems very good for the quality of the service. I will use it again for sure."</blockquote>
-          <figcaption><span class="q-avatar">D</span><div><strong>David Sousa Moreau</strong><small>Local Guide · Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">D</span><div><strong>David Sousa Moreau</strong><small data-fr="Guide local · avis Google">Local Guide · Google review</small></div></figcaption>
         </figure>
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Super fast and reliable. My laundry was picked up the same day and delivered back within 24 hours. Everything smelled amazing and was neatly folded. Will definitely use them again."</blockquote>
-          <figcaption><span class="q-avatar">S</span><div><strong>Soup Professor</strong><small>Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">S</span><div><strong>Soup Professor</strong><small data-fr="avis Google">Google review</small></div></figcaption>
         </figure>
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Great reliable service and very quick. The clothes were refreshing and folded properly! Will definitely order again."</blockquote>
-          <figcaption><span class="q-avatar">A</span><div><strong>Ahmed Rashed</strong><small>Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">A</span><div><strong>Ahmed Rashed</strong><small data-fr="avis Google">Google review</small></div></figcaption>
         </figure>
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Trop gentil, le propriétaire était vraiment adorable, en plus de ça tout mes habits sentait vraiment bon ! Je recommande."</blockquote>
-          <figcaption><span class="q-avatar">T</span><div><strong>Tokely Juliana</strong><small>Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">T</span><div><strong>Tokely Juliana</strong><small data-fr="avis Google">Google review</small></div></figcaption>
         </figure>
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Great service. I'll use them again."</blockquote>
-          <figcaption><span class="q-avatar">M</span><div><strong>Max Shew</strong><small>Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">M</span><div><strong>Max Shew</strong><small data-fr="avis Google">Google review</small></div></figcaption>
         </figure>
         <figure class="quote-card">
           <div class="quote-stars">★★★★★</div>
           <blockquote>"Friendly service and always on time."</blockquote>
-          <figcaption><span class="q-avatar">C</span><div><strong>Christopher Gordon</strong><small>Google review</small></div></figcaption>
+          <figcaption><span class="q-avatar">C</span><div><strong>Christopher Gordon</strong><small data-fr="avis Google">Google review</small></div></figcaption>
         </figure>
       </div>
       <div class="slider-dots" id="sliderDots"></div>
     </div>
     <div class="reviews-cta reveal d1">
-      <a href="https://www.google.com/maps/place/Washly+MTL/@45.5141623,-73.5755693,17z/data=!4m6!3m5!1s0x6cce515873632181:0x16a990db73760f36!8m2!3d45.5141623!4d-73.5755693!16s%2Fg%2F11n9s7m5n0" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+      <a href="https://www.google.com/maps/place/Washly+MTL/@45.5141623,-73.5755693,17z/data=!4m6!3m5!1s0x6cce515873632181:0x16a990db73760f36!8m2!3d45.5141623!4d-73.5755693!16s%2Fg%2F11n9s7m5n0" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-fr="<span class='reviews-cta-stars'>★★★★★</span> Lire les 14 avis sur Google">
         <span class="reviews-cta-stars">★★★★★</span> Read all 14 reviews on Google
       </a>
     </div>
@@ -418,12 +419,12 @@
 <section class="section" id="areas">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Coverage</span>
-      <h2>All of <span class="grad-text">Montréal.</span></h2>
-      <p>We serve every Montréal neighborhood. Extended delivery available for outlying areas (+$4.99 for addresses over 30 minutes away).</p>
+      <span class="eyebrow" data-fr="Zones desservies">Coverage</span>
+      <h2 data-fr="Tout <span class='grad-text'>Montréal.</span>">All of <span class="grad-text">Montréal.</span></h2>
+      <p data-fr="Nous desservons tous les quartiers de Montréal. Livraison étendue disponible pour les secteurs éloignés (+4,99 $ pour les adresses à plus de 30 minutes).">We serve every Montréal neighborhood. Extended delivery available for outlying areas (+$4.99 for addresses over 30 minutes away).</p>
     </div>
     <div class="areas reveal d1">
-      <span class="area-chip">Le Plateau</span><span class="area-chip">Mile End</span><span class="area-chip">Ville-Marie</span><span class="area-chip">Griffintown</span><span class="area-chip">Verdun</span><span class="area-chip">NDG</span><span class="area-chip">Outremont</span><span class="area-chip">Rosemont</span><span class="area-chip">Hochelaga</span><span class="area-chip">Villeray</span><span class="area-chip">Saint-Henri</span><span class="area-chip">Westmount</span><span class="area-chip">Ahuntsic</span><span class="area-chip">LaSalle</span><span class="area-chip">Côte-des-Neiges</span><span class="area-chip">Old Montréal</span><span class="area-chip area-chip-more">+ every other neighborhood</span>
+      <span class="area-chip">Le Plateau</span><span class="area-chip">Mile End</span><span class="area-chip">Ville-Marie</span><span class="area-chip">Griffintown</span><span class="area-chip">Verdun</span><span class="area-chip">NDG</span><span class="area-chip">Outremont</span><span class="area-chip">Rosemont</span><span class="area-chip">Hochelaga</span><span class="area-chip">Villeray</span><span class="area-chip">Saint-Henri</span><span class="area-chip">Westmount</span><span class="area-chip">Ahuntsic</span><span class="area-chip">LaSalle</span><span class="area-chip">Côte-des-Neiges</span><span class="area-chip">Old Montréal</span><span class="area-chip area-chip-more" data-fr="+ tous les autres quartiers">+ every other neighborhood</span>
     </div>
   </div>
 </section>
@@ -433,38 +434,38 @@
   <div class="bubbles bubbles-soft" id="b2bBubbles" aria-hidden="true"></div>
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow eyebrow-light">Washly for Business</span>
-      <h2 class="on-dark">Bulk laundry, <span class="grad-text">handled.</span></h2>
-      <p class="on-dark-sub">Tailored solutions for businesses of all sizes — so your linens are always fresh and your team never thinks about laundry.</p>
+      <span class="eyebrow eyebrow-light" data-fr="Washly pour les entreprises">Washly for Business</span>
+      <h2 class="on-dark" data-fr="La lessive en gros, <span class='grad-text'>prise en charge.</span>">Bulk laundry, <span class="grad-text">handled.</span></h2>
+      <p class="on-dark-sub" data-fr="Des solutions sur mesure pour les entreprises de toutes tailles — pour un linge toujours frais et une équipe qui n'a plus à y penser.">Tailored solutions for businesses of all sizes — so your linens are always fresh and your team never thinks about laundry.</p>
     </div>
     <div class="b2b-audiences reveal d1">
-      <span class="area-chip">🏨 Hotels</span>
-      <span class="area-chip">🏋️ Gyms &amp; studios</span>
-      <span class="area-chip">🏠 Airbnb hosts</span>
-      <span class="area-chip">🏢 Corporate offices</span>
-      <span class="area-chip">💇 Salons &amp; spas</span>
-      <span class="area-chip">🍽️ Restaurants</span>
+      <span class="area-chip" data-fr="🏨 Hôtels">🏨 Hotels</span>
+      <span class="area-chip" data-fr="🏋️ Gyms et studios">🏋️ Gyms &amp; studios</span>
+      <span class="area-chip" data-fr="🏠 Hôtes Airbnb">🏠 Airbnb hosts</span>
+      <span class="area-chip" data-fr="🏢 Bureaux">🏢 Corporate offices</span>
+      <span class="area-chip" data-fr="💇 Salons et spas">💇 Salons &amp; spas</span>
+      <span class="area-chip" data-fr="🍽️ Restaurants">🍽️ Restaurants</span>
     </div>
     <div class="b2b-perks">
       <article class="b2b-perk reveal d1">
         <span class="b2b-perk-icon">📅</span>
-        <h3>Flexible scheduling</h3>
-        <p>Recurring pickups built around your operating hours — daily, weekly, or on demand.</p>
+        <h3 data-fr="Horaire flexible">Flexible scheduling</h3>
+        <p data-fr="Des collectes récurrentes adaptées à vos heures d'ouverture — quotidiennes, hebdomadaires ou sur demande.">Recurring pickups built around your operating hours — daily, weekly, or on demand.</p>
       </article>
       <article class="b2b-perk reveal d2">
         <span class="b2b-perk-icon">📦</span>
-        <h3>Volume pricing</h3>
-        <p>The more you wash, the less you pay. Custom rates matched to your monthly volume.</p>
+        <h3 data-fr="Tarifs de volume">Volume pricing</h3>
+        <p data-fr="Plus vous lavez, moins vous payez. Des tarifs adaptés à votre volume mensuel.">The more you wash, the less you pay. Custom rates matched to your monthly volume.</p>
       </article>
       <article class="b2b-perk reveal d3">
         <span class="b2b-perk-icon">🤝</span>
-        <h3>Dedicated account manager</h3>
-        <p>One point of contact who knows your business — no tickets, no waiting queues.</p>
+        <h3 data-fr="Gestionnaire de compte dédié">Dedicated account manager</h3>
+        <p data-fr="Un seul interlocuteur qui connaît votre entreprise — sans billets ni files d'attente.">One point of contact who knows your business — no tickets, no waiting queues.</p>
       </article>
     </div>
     <div class="b2b-cta reveal d2">
-      <h3>Let's build something together.</h3>
-      <p>For a quote, email us at <a href="mailto:partnerships@washlymtl.com" class="b2b-email">partnerships@washlymtl.com</a> — tell us your business type and rough weekly volume, and we'll come back with a tailored proposal.</p>
+      <h3 data-fr="Bâtissons quelque chose ensemble.">Let's build something together.</h3>
+      <p data-fr="Pour un devis, écrivez-nous à <a href='mailto:partnerships@washlymtl.com' class='b2b-email'>partnerships@washlymtl.com</a> — indiquez votre type d'entreprise et votre volume hebdomadaire approximatif, et nous reviendrons avec une proposition sur mesure.">For a quote, email us at <a href="mailto:partnerships@washlymtl.com" class="b2b-email">partnerships@washlymtl.com</a> — tell us your business type and rough weekly volume, and we'll come back with a tailored proposal.</p>
     </div>
   </div>
 </section>
@@ -474,20 +475,20 @@
   <div class="bubbles bubbles-soft" id="bookBubbles" aria-hidden="true"></div>
   <div class="container booking-grid">
     <div class="booking-copy reveal">
-      <span class="eyebrow eyebrow-light">🚀 Available now</span>
-      <h2 class="on-dark">Everything in <span class="grad-text">one app.</span></h2>
-      <p class="on-dark-sub">Place orders, track your laundry in real time, and manage your subscription — your first pickup is less than 2 minutes away.</p>
+      <span class="eyebrow eyebrow-light" data-fr="🚀 Disponible maintenant">🚀 Available now</span>
+      <h2 class="on-dark" data-fr="Tout dans <span class='grad-text'>une seule app.</span>">Everything in <span class="grad-text">one app.</span></h2>
+      <p class="on-dark-sub" data-fr="Commandez, suivez votre linge en temps réel et gérez votre abonnement — votre première collecte est à moins de 2 minutes.">Place orders, track your laundry in real time, and manage your subscription — your first pickup is less than 2 minutes away.</p>
       <div class="store-btns">
         <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="store-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <div><small>Download on the</small><strong>App Store</strong></div>
+          <div><small data-fr="Télécharger sur">Download on the</small><strong>App Store</strong></div>
         </a>
       </div>
       <div class="booking-perks">
-        <span>✓ Free pickup &amp; delivery</span>
-        <span>✓ 24h turnaround guaranteed</span>
-        <span>✓ No minimum — one bag is fine</span>
-        <span>✓ Free to download, no account required to browse</span>
+        <span data-fr="✓ Collecte et livraison gratuites">✓ Free pickup &amp; delivery</span>
+        <span data-fr="✓ Délai de 24h garanti">✓ 24h turnaround guaranteed</span>
+        <span data-fr="✓ Aucun minimum — un sac suffit">✓ No minimum — one bag is fine</span>
+        <span data-fr="✓ Téléchargement gratuit, aucun compte requis pour explorer">✓ Free to download, no account required to browse</span>
       </div>
     </div>
     <div class="download-visual reveal d1">
@@ -502,46 +503,46 @@
 <section class="section section-mint" id="faq">
   <div class="container faq-container">
     <div class="section-head reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2>Questions? <span class="grad-text">Answered.</span></h2>
-      <p>Everything you need to know about Washly.</p>
+      <span class="eyebrow" data-fr="FAQ">FAQ</span>
+      <h2 data-fr="Des questions ? <span class='grad-text'>Des réponses.</span>">Questions? <span class="grad-text">Answered.</span></h2>
+      <p data-fr="Tout ce qu'il faut savoir sur Washly.">Everything you need to know about Washly.</p>
     </div>
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary>What is the turnaround time?<span class="faq-chev"></span></summary>
-        <p>24 hours from pickup to delivery. We pick up your laundry, wash, fold, and return it to your door the next day.</p>
+        <summary data-fr="Quel est le délai de traitement ?<span class='faq-chev'></span>">What is the turnaround time?<span class="faq-chev"></span></summary>
+        <p data-fr="24 heures de la collecte à la livraison. On récupère votre linge, on le lave, on le plie et on le rapporte à votre porte le lendemain.">24 hours from pickup to delivery. We pick up your laundry, wash, fold, and return it to your door the next day.</p>
       </details>
       <details class="faq-item reveal d1">
-        <summary>What are the bag size limits?<span class="faq-chev"></span></summary>
-        <p>The Standard bag holds approximately 20 lbs (9 kg) — great for a week of everyday clothes. The Large bag holds approximately 30 lbs (14 kg) — ideal for families or bulkier items.</p>
+        <summary data-fr="Quelles sont les limites de taille des sacs ?<span class='faq-chev'></span>">What are the bag size limits?<span class="faq-chev"></span></summary>
+        <p data-fr="Le sac standard contient environ 9 kg (20 lb) — idéal pour une semaine de vêtements. Le grand sac contient environ 14 kg (30 lb) — parfait pour les familles ou les articles volumineux.">The Standard bag holds approximately 20 lbs (9 kg) — great for a week of everyday clothes. The Large bag holds approximately 30 lbs (14 kg) — ideal for families or bulkier items.</p>
       </details>
       <details class="faq-item reveal d2">
-        <summary>Is there a minimum order? Any hidden fees?<span class="faq-chev"></span></summary>
-        <p>No minimum — one bag is fine. And never any hidden fees: the only extra is the $4.99 extended delivery fee for addresses over 30 minutes away, which is always shown before you confirm.</p>
+        <summary data-fr="Y a-t-il un minimum de commande ? Des frais cachés ?<span class='faq-chev'></span>">Is there a minimum order? Any hidden fees?<span class="faq-chev"></span></summary>
+        <p data-fr="Aucun minimum — un seul sac suffit. Et jamais de frais cachés : le seul supplément est la livraison étendue de 4,99 $ pour les adresses à plus de 30 minutes, toujours affichée avant confirmation.">No minimum — one bag is fine. And never any hidden fees: the only extra is the $4.99 extended delivery fee for addresses over 30 minutes away, which is always shown before you confirm.</p>
       </details>
       <details class="faq-item reveal d3">
-        <summary>What detergents do you use?<span class="faq-chev"></span></summary>
-        <p>We use premium, biodegradable, and eco-friendly detergents that are tough on stains but gentle on your fabrics.</p>
+        <summary data-fr="Quels détergents utilisez-vous ?<span class='faq-chev'></span>">What detergents do you use?<span class="faq-chev"></span></summary>
+        <p data-fr="Nous utilisons des détergents premium, biodégradables et écologiques, efficaces sur les taches mais doux pour vos tissus.">We use premium, biodegradable, and eco-friendly detergents that are tough on stains but gentle on your fabrics.</p>
       </details>
       <details class="faq-item reveal d4">
-        <summary>What happens if I miss a pickup?<span class="faq-chev"></span></summary>
-        <p>No worries! Just reschedule anytime through the app. If you're on a subscription plan, your bag credit stays with you and doesn't expire.</p>
+        <summary data-fr="Que se passe-t-il si je manque une collecte ?<span class='faq-chev'></span>">What happens if I miss a pickup?<span class="faq-chev"></span></summary>
+        <p data-fr="Pas de souci ! Reprogrammez à tout moment dans l'app. Avec un forfait, votre crédit de sac vous reste et n'expire pas.">No worries! Just reschedule anytime through the app. If you're on a subscription plan, your bag credit stays with you and doesn't expire.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>Can I cancel my subscription?<span class="faq-chev"></span></summary>
-        <p>Yes, absolutely. Cancel anytime with no fees or penalties. You keep access to all your remaining bags until the end of your current billing period.</p>
+        <summary data-fr="Puis-je annuler mon abonnement ?<span class='faq-chev'></span>">Can I cancel my subscription?<span class="faq-chev"></span></summary>
+        <p data-fr="Oui, tout à fait. Annulez à tout moment, sans frais ni pénalité. Vous conservez vos sacs restants jusqu'à la fin de la période de facturation en cours.">Yes, absolutely. Cancel anytime with no fees or penalties. You keep access to all your remaining bags until the end of your current billing period.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>Do unused subscription bags roll over?<span class="faq-chev"></span></summary>
-        <p>Unused bags do not roll over to the next billing cycle. We recommend scheduling pickups throughout the month to make the most of your plan.</p>
+        <summary data-fr="Les sacs d'abonnement inutilisés sont-ils reportés ?<span class='faq-chev'></span>">Do unused subscription bags roll over?<span class="faq-chev"></span></summary>
+        <p data-fr="Les sacs inutilisés ne sont pas reportés au cycle suivant. Nous vous recommandons de planifier vos collectes tout au long du mois pour profiter pleinement de votre forfait.">Unused bags do not roll over to the next billing cycle. We recommend scheduling pickups throughout the month to make the most of your plan.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>How do I track my order?<span class="faq-chev"></span></summary>
-        <p>The Washly app provides real-time status updates for every order: Picked Up → Cleaning → Out for Delivery → Delivered. You'll also receive push notifications at each step.</p>
+        <summary data-fr="Comment suivre ma commande ?<span class='faq-chev'></span>">How do I track my order?<span class="faq-chev"></span></summary>
+        <p data-fr="L'app Washly fournit des mises à jour en temps réel pour chaque commande : Récupéré → Lavage → En livraison → Livré. Vous recevez aussi une notification à chaque étape.">The Washly app provides real-time status updates for every order: Picked Up → Cleaning → Out for Delivery → Delivered. You'll also receive push notifications at each step.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>What items do you accept?<span class="faq-chev"></span></summary>
-        <p>We accept everyday clothing, bed linens, towels, and similar items. We do not accept dry-clean-only garments, leather or suede items, or heavily soiled items requiring special treatment.</p>
+        <summary data-fr="Quels articles acceptez-vous ?<span class='faq-chev'></span>">What items do you accept?<span class="faq-chev"></span></summary>
+        <p data-fr="Nous acceptons les vêtements du quotidien, les draps, les serviettes et articles similaires. Nous n'acceptons pas les vêtements nettoyage à sec uniquement, le cuir ou le daim, ni les articles très souillés nécessitant un traitement spécial.">We accept everyday clothing, bed linens, towels, and similar items. We do not accept dry-clean-only garments, leather or suede items, or heavily soiled items requiring special treatment.</p>
       </details>
     </div>
   </div>
@@ -551,45 +552,45 @@
 <section class="section" id="policy">
   <div class="container faq-container">
     <div class="section-head reveal">
-      <span class="eyebrow">Policies &amp; Protection</span>
-      <h2>Clear rules. <span class="grad-text">Zero surprises.</span></h2>
-      <p>The fine print, minus the fine print — so every order is fair for you and for us.</p>
+      <span class="eyebrow" data-fr="Politiques et protection">Policies &amp; Protection</span>
+      <h2 data-fr="Des règles claires. <span class='grad-text'>Zéro surprise.</span>">Clear rules. <span class="grad-text">Zero surprises.</span></h2>
+      <p data-fr="Les petits caractères, sans les petits caractères — pour que chaque commande soit équitable, pour vous comme pour nous.">The fine print, minus the fine print — so every order is fair for you and for us.</p>
     </div>
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary>Scheduling &amp; cancellation<span class="faq-chev"></span></summary>
-        <p>Orders must be placed at least 2 hours before the desired pickup time. Cancellations made less than 1 hour before the scheduled pickup may be subject to a cancellation fee. Washly reserves the right to reschedule in the event of unforeseen circumstances (weather, road closures) — we'll always notify you first.</p>
+        <summary data-fr="Planification et annulation<span class='faq-chev'></span>">Scheduling &amp; cancellation<span class="faq-chev"></span></summary>
+        <p data-fr="Les commandes doivent être passées au moins 2 heures avant l'heure de collecte souhaitée. Une annulation faite moins d'une heure avant la collecte prévue peut entraîner des frais d'annulation. Washly se réserve le droit de reprogrammer en cas d'imprévu (météo, fermeture de routes) — nous vous préviendrons toujours d'abord.">Orders must be placed at least 2 hours before the desired pickup time. Cancellations made less than 1 hour before the scheduled pickup may be subject to a cancellation fee. Washly reserves the right to reschedule in the event of unforeseen circumstances (weather, road closures) — we'll always notify you first.</p>
       </details>
       <details class="faq-item reveal d1">
-        <summary>Garment care &amp; liability<span class="faq-chev"></span></summary>
-        <p>We treat every garment with professional care. Washly is not responsible for pre-existing damage, color bleeding due to fabric incompatibility, or items left in pockets. We recommend not sending delicate or irreplaceable items. Our liability is limited to the value of the service rendered.</p>
+        <summary data-fr="Soin des vêtements et responsabilité<span class='faq-chev'></span>">Garment care &amp; liability<span class="faq-chev"></span></summary>
+        <p data-fr="Nous traitons chaque vêtement avec un soin professionnel. Washly n'est pas responsable des dommages préexistants, des dégorgements de couleur dus à l'incompatibilité des tissus, ni des objets laissés dans les poches. Nous recommandons de ne pas envoyer d'articles délicats ou irremplaçables. Notre responsabilité se limite à la valeur du service rendu.">We treat every garment with professional care. Washly is not responsible for pre-existing damage, color bleeding due to fabric incompatibility, or items left in pockets. We recommend not sending delicate or irreplaceable items. Our liability is limited to the value of the service rendered.</p>
       </details>
       <details class="faq-item reveal d2">
-        <summary>Bag intake &amp; claims<span class="faq-chev"></span></summary>
-        <p>Every bag is weighed and photographed at intake, and orders are tracked end to end. Any claim for damaged or missing items must be reported within 48 hours of delivery, with photos, and is assessed against the intake record. This protects honest customers — and protects us from claims for items that were never in the bag.</p>
+        <summary data-fr="Réception des sacs et réclamations<span class='faq-chev'></span>">Bag intake &amp; claims<span class="faq-chev"></span></summary>
+        <p data-fr="Chaque sac est pesé et photographié à la réception, et les commandes sont suivies de bout en bout. Toute réclamation pour article endommagé ou manquant doit être signalée dans les 48 heures suivant la livraison, avec photos, et est évaluée par rapport au relevé de réception. Cela protège les clients honnêtes — et nous protège des réclamations pour des articles qui n'ont jamais été dans le sac.">Every bag is weighed and photographed at intake, and orders are tracked end to end. Any claim for damaged or missing items must be reported within 48 hours of delivery, with photos, and is assessed against the intake record. This protects honest customers — and protects us from claims for items that were never in the bag.</p>
       </details>
       <details class="faq-item reveal d3">
-        <summary>Prohibited &amp; valuable items<span class="faq-chev"></span></summary>
-        <p>Please don't place cash, jewelry, electronics, documents, keys or other valuables in your laundry bag — Washly cannot be held responsible for such items. We also refuse hazardous, heavily contaminated or biohazardous items for the safety of our team.</p>
+        <summary data-fr="Articles interdits et de valeur<span class='faq-chev'></span>">Prohibited &amp; valuable items<span class="faq-chev"></span></summary>
+        <p data-fr="Ne placez pas d'argent, de bijoux, d'appareils électroniques, de documents, de clés ni d'autres objets de valeur dans votre sac — Washly ne peut en être tenu responsable. Nous refusons aussi les articles dangereux, fortement contaminés ou présentant un risque biologique, pour la sécurité de notre équipe.">Please don't place cash, jewelry, electronics, documents, keys or other valuables in your laundry bag — Washly cannot be held responsible for such items. We also refuse hazardous, heavily contaminated or biohazardous items for the safety of our team.</p>
       </details>
       <details class="faq-item reveal d4">
-        <summary>Payments, refunds &amp; chargebacks<span class="faq-chev"></span></summary>
-        <p>All payments are processed securely through the Washly app — our drivers never collect cash or request e-transfers. Refunds are assessed case by case and issued within 5–7 business days. Fraudulent payments, abusive chargebacks or repeated false claims may result in account suspension.</p>
+        <summary data-fr="Paiements, remboursements et rétrofacturations<span class='faq-chev'></span>">Payments, refunds &amp; chargebacks<span class="faq-chev"></span></summary>
+        <p data-fr="Tous les paiements sont traités de façon sécurisée dans l'app Washly — nos chauffeurs ne prennent jamais d'argent comptant et ne demandent jamais de virement Interac. Les remboursements sont évalués au cas par cas et versés sous 5 à 7 jours ouvrables. Les paiements frauduleux, les rétrofacturations abusives ou les fausses réclamations répétées peuvent entraîner la suspension du compte.">All payments are processed securely through the Washly app — our drivers never collect cash or request e-transfers. Refunds are assessed case by case and issued within 5–7 business days. Fraudulent payments, abusive chargebacks or repeated false claims may result in account suspension.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>Privacy &amp; your data<span class="faq-chev"></span></summary>
-        <p>Your personal data is used solely to provide and improve our service, stored with industry-standard encryption, and never sold to third parties. You can request access, correction or deletion of your data anytime at support@washlymtl.com — we respond within 30 days.</p>
+        <summary data-fr="Confidentialité et vos données<span class='faq-chev'></span>">Privacy &amp; your data<span class="faq-chev"></span></summary>
+        <p data-fr="Vos données personnelles servent uniquement à fournir et améliorer notre service, sont stockées avec un chiffrement conforme aux normes de l'industrie, et ne sont jamais vendues à des tiers. Vous pouvez demander l'accès, la correction ou la suppression de vos données à tout moment à support@washlymtl.com — nous répondons sous 30 jours.">Your personal data is used solely to provide and improve our service, stored with industry-standard encryption, and never sold to third parties. You can request access, correction or deletion of your data anytime at support@washlymtl.com — we respond within 30 days.</p>
       </details>
       <details class="faq-item reveal d5">
-        <summary>Service agreement &amp; governing law<span class="faq-chev"></span></summary>
-        <p>By using Washly's services you agree to these terms, which we may update from time to time. These terms are governed by the laws of the Province of Quebec and the federal laws of Canada, and any disputes shall be resolved in the courts of Montréal, Quebec.</p>
+        <summary data-fr="Entente de service et droit applicable<span class='faq-chev'></span>">Service agreement &amp; governing law<span class="faq-chev"></span></summary>
+        <p data-fr="En utilisant les services de Washly, vous acceptez ces conditions, que nous pouvons mettre à jour de temps à autre. Ces conditions sont régies par les lois de la province de Québec et les lois fédérales du Canada, et tout litige sera résolu devant les tribunaux de Montréal, Québec.">By using Washly's services you agree to these terms, which we may update from time to time. These terms are governed by the laws of the Province of Quebec and the federal laws of Canada, and any disputes shall be resolved in the courts of Montréal, Quebec.</p>
       </details>
     </div>
     <div class="scam-note reveal d2">
       <span class="scam-note-icon">🛡️</span>
       <div>
-        <h3>Stay scam-safe</h3>
-        <p>Washly only communicates from <strong>@washlymtl.com</strong> email addresses and inside the app. We will <strong>never</strong> call you to ask for your password, gift cards, cash, or an e-transfer. If someone does, it's not us — please report it to support@washlymtl.com.</p>
+        <h3 data-fr="Attention aux fraudes">Stay scam-safe</h3>
+        <p data-fr="Washly ne communique qu'à partir d'adresses courriel <strong>@washlymtl.com</strong> et dans l'app. Nous ne vous appellerons <strong>jamais</strong> pour demander votre mot de passe, des cartes-cadeaux, de l'argent comptant ou un virement Interac. Si quelqu'un le fait, ce n'est pas nous — signalez-le à support@washlymtl.com.">Washly only communicates from <strong>@washlymtl.com</strong> email addresses and inside the app. We will <strong>never</strong> call you to ask for your password, gift cards, cash, or an e-transfer. If someone does, it's not us — please report it to support@washlymtl.com.</p>
       </div>
     </div>
   </div>
@@ -599,14 +600,14 @@
 <section class="section contact-section" id="contact">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Contact &amp; Support</span>
-      <h2>Still have questions? <span class="grad-text">We're here.</span></h2>
-      <p>Real people, fast replies — 7 days a week, 9AM–9PM. Average response time: under 15 minutes.</p>
+      <span class="eyebrow" data-fr="Contact et soutien">Contact &amp; Support</span>
+      <h2 data-fr="D'autres questions ? <span class='grad-text'>On est là.</span>">Still have questions? <span class="grad-text">We're here.</span></h2>
+      <p data-fr="De vraies personnes, des réponses rapides — 7 jours sur 7, de 9h à 21h. Temps de réponse moyen : moins de 15 minutes.">Real people, fast replies — 7 days a week, 9AM–9PM. Average response time: under 15 minutes.</p>
     </div>
     <div class="contact-cards contact-cards-single">
       <a href="mailto:support@washlymtl.com" class="contact-card reveal">
         <span class="cc-icon">✉️</span>
-        <strong>Email Support</strong>
+        <strong data-fr="Soutien par courriel">Email Support</strong>
         <span class="cc-value">support@washlymtl.com</span>
       </a>
     </div>
@@ -617,9 +618,9 @@
 <section class="final-cta">
   <div class="bubbles" id="ctaBubbles" aria-hidden="true"></div>
   <div class="container reveal">
-    <h2>Ready for laundry freedom?</h2>
-    <p>We do the laundry. You live your life.</p>
-    <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-invert btn-lg">Download Washly</a>
+    <h2 data-fr="Prêt pour la liberté lessive ?">Ready for laundry freedom?</h2>
+    <p data-fr="On s'occupe de la lessive. Vous vivez votre vie.">We do the laundry. You live your life.</p>
+    <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-invert btn-lg" data-fr="Télécharger Washly">Download Washly</a>
   </div>
 </section>
 
@@ -633,37 +634,37 @@
         </span>
         <span class="brand-name">Wash<em>ly</em></span>
       </a>
-      <p>Washly is Montréal's premier laundry pickup and delivery service. We handle the washing so you can focus on what matters.</p>
-      <small>Proudly washing in Montréal, QC 🇨🇦</small>
+      <p data-fr="Washly est le service de collecte et de livraison de lessive numéro un à Montréal. On s'occupe du lavage pour que vous puissiez vous concentrer sur l'essentiel.">Washly is Montréal's premier laundry pickup and delivery service. We handle the washing so you can focus on what matters.</p>
+      <small data-fr="Fièrement à l'œuvre à Montréal, QC 🇨🇦">Proudly washing in Montréal, QC 🇨🇦</small>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="#how">How it works</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+      <h4 data-fr="Liens rapides">Quick Links</h4>
+      <a href="#how" data-fr="Fonctionnement">How it works</a>
+      <a href="#services" data-fr="Services">Services</a>
+      <a href="#pricing" data-fr="Tarifs">Pricing</a>
+      <a href="#faq" data-fr="FAQ">FAQ</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4 data-fr="Contact">Contact</h4>
       <a href="mailto:support@washlymtl.com">support@washlymtl.com</a>
       <a href="mailto:partnerships@washlymtl.com">partnerships@washlymtl.com</a>
     </div>
     <div class="footer-col">
-      <h4>Get the app</h4>
+      <h4 data-fr="Obtenir l'app">Get the app</h4>
       <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer">App Store</a>
-      <a href="#policy">Policies</a>
-      <a href="#contact">Support hours: 7/7, 9AM–9PM</a>
+      <a href="#policy" data-fr="Politiques">Policies</a>
+      <a href="#contact" data-fr="Heures de soutien : 7/7, 9h–21h">Support hours: 7/7, 9AM–9PM</a>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 Washly MTL. All rights reserved.</span>
-    <span>We do the laundry. You live your life. 💚</span>
+    <span data-fr="© 2026 Washly MTL. Tous droits réservés.">© 2026 Washly MTL. All rights reserved.</span>
+    <span data-fr="On s'occupe de la lessive. Vous vivez votre vie. 💚">We do the laundry. You live your life. 💚</span>
   </div>
 </footer>
 
-<a href="#download" class="floating-cta" id="floatingCta">📱 Get the app</a>
+<a href="#download" class="floating-cta" id="floatingCta" data-fr="📱 Obtenir l'app">📱 Get the app</a>
 
-<script src="js/app.js?v=3"></script>
+<script src="js/app.js?v=4"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
