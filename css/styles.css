@@ -526,6 +526,17 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 .price sup { font-size: 1.4rem; vertical-align: super; color: var(--lime-deep); }
 .price span { font-size: 1.05rem; color: var(--muted); font-weight: 600; }
 .price-sub { color: var(--muted); font-weight: 600; font-size: .92rem; margin-bottom: 22px; }
+.price-save {
+  display: inline-block; margin: -12px 0 20px;
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  color: var(--lime-deep); background: var(--lime-soft);
+  border: 1px solid rgba(122,154,30,.28);
+  padding: 5px 13px; border-radius: 999px;
+}
+.price-featured .price-save {
+  color: var(--ink); background: var(--lime);
+  border-color: transparent;
+}
 .price-card ul { list-style: none; display: grid; gap: 11px; margin-bottom: 30px; flex: 1; }
 .price-card li { padding-left: 28px; position: relative; font-size: .96rem; color: var(--text); font-weight: 500; }
 .price-card li::before {
