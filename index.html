@@ -8,10 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=6">
+<link rel="stylesheet" href="css/styles.css?v=9">
 <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- ══════════════ NAVBAR ══════════════ -->
 <header class="navbar" id="navbar">
@@ -30,7 +31,7 @@
       <a href="#b2b" data-fr="Entreprises">Business</a>
       <a href="#faq" data-fr="FAQ">FAQ</a>
       <a href="#contact" data-fr="Contact">Contact</a>
-      <a href="#download" class="btn btn-primary nav-cta" data-fr="Télécharger l'app">Download App</a>
+      <a href="#book" class="btn btn-primary nav-cta" data-fr="Réserver">Book a pickup</a>
     </nav>
     <button class="lang-toggle" id="langToggle" aria-label="Passer en français">FR</button>
     <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
@@ -42,6 +43,7 @@
 
 <!-- ══════════════ HERO ══════════════ -->
 <section class="hero" id="top">
+  <div class="hero-aurora" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-a"></div>
   <div class="hero-glow hero-glow-b"></div>
   <div class="bubbles" id="heroBubbles" aria-hidden="true"></div>
@@ -54,8 +56,8 @@
       <h1 class="reveal d1" data-fr="Votre lessive,<br><span class='grad-text'>prête en 24 heures.</span>">Your laundry,<br><span class="grad-text">done in 24 hours.</span></h1>
       <p class="hero-sub reveal d2" data-fr="On récupère, lave, plie et rapporte tout à votre porte — <strong>frais et prêt en 24 heures</strong>. Fini la buanderie. Pour de bon.">We pick up, wash, fold, and deliver back to your door — <strong>fresh and ready within 24 hours</strong>. No trips to the laundromat. Ever again.</p>
       <div class="hero-ctas reveal d3">
-        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-fr="Télécharger l'app <svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M5 12h14M13 6l6 6-6 6' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-          Download the App
+        <a href="#book" class="btn btn-primary btn-lg" data-fr="Réserver une collecte <svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M5 12h14M13 6l6 6-6 6' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+          Book a pickup
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#how" class="btn btn-ghost btn-lg" data-fr="Voir comment ça marche">See how it works</a>
@@ -122,6 +124,34 @@
     <span data-fr="🇨🇦 Équipe montréalaise">🇨🇦 Montréal-based team</span><i>✦</i>
   </div>
 </div>
+
+<!-- ══════════════ INSTANT QUOTE ══════════════ -->
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="quote-card2 reveal">
+      <span class="eyebrow" data-fr="Prix instantané">Instant price</span>
+      <h2 data-fr="Votre prix en <span class='grad-text'>5 secondes.</span>">Your price in <span class="grad-text">5 seconds.</span></h2>
+      <div class="quote-controls">
+        <div class="seg" id="qSeg">
+          <button type="button" class="seg-btn active" data-price="34.99" data-fr="Sac standard · 34,99 $">Standard bag · $34.99</button>
+          <button type="button" class="seg-btn" data-price="39.99" data-fr="Grand sac · 39,99 $">Large bag · $39.99</button>
+        </div>
+        <div class="stepper">
+          <button type="button" class="step-btn" id="qMinus" aria-label="Fewer bags">−</button>
+          <span class="step-val"><span id="qCount">1</span>&nbsp;<span data-fr="sac(s)">bag(s)</span></span>
+          <button type="button" class="step-btn" id="qPlus" aria-label="More bags">+</button>
+        </div>
+      </div>
+      <div class="quote-total">
+        <span class="quote-total-label" data-fr="Votre total">Your total</span>
+        <span class="quote-amount" id="qTotal">$34.99</span>
+      </div>
+      <p class="quote-perks" data-fr="✓ Collecte et livraison gratuites&nbsp;&nbsp;✓ Frais en 24h&nbsp;&nbsp;✓ Aucun paiement maintenant">✓ Free pickup &amp; delivery&nbsp;&nbsp;✓ Fresh in 24h&nbsp;&nbsp;✓ No payment now</p>
+      <a href="#book" class="btn btn-primary btn-lg btn-block" id="quoteReserve" data-fr="Réserver ma collecte →">Reserve my pickup →</a>
+      <p class="quote-note" data-fr="Vous lavez souvent ? Économisez jusqu'à 30 % avec un forfait ci-dessous.">Wash often? Save up to 30% with a plan below.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════ HOW IT WORKS ══════════════ -->
 <section class="section" id="how">
@@ -366,6 +396,115 @@
       </article>
     </div>
     <p class="pricing-fineprint reveal" data-fr="Tous les forfaits incluent le lavage et pliage professionnel, la collecte et livraison gratuites et le délai de 24 heures. Les sacs inutilisés ne sont pas reportés — planifiez vos collectes durant le mois pour en profiter pleinement.">All plans include professional wash &amp; fold, free pickup &amp; delivery, and 24-hour turnaround. Unused bags don't roll over — schedule pickups through the month to get the most from your plan.</p>
+  </div>
+</section>
+
+<!-- ══════════════ BOOKING FLOW ══════════════ -->
+<section class="section booking-flow" id="book">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-fr="Réservez en 3 étapes">Book in 3 steps</span>
+      <h2 data-fr="Votre linge, <span class='grad-text'>récupéré aujourd'hui.</span>">Your laundry, <span class="grad-text">picked up today.</span></h2>
+      <p data-fr="Moins de 60 secondes. Aucun compte requis.">Under 60 seconds. No account needed.</p>
+    </div>
+
+    <div class="wizard reveal d1" id="wizard">
+      <div class="wiz-steps">
+        <div class="wiz-step active" data-dot="1"><span class="wiz-dot">1</span><span class="wiz-label" data-fr="Votre sac">Your bag</span></div>
+        <div class="wiz-step" data-dot="2"><span class="wiz-dot">2</span><span class="wiz-label" data-fr="Collecte">Pickup</span></div>
+        <div class="wiz-step" data-dot="3"><span class="wiz-dot">3</span><span class="wiz-label" data-fr="Vous">You</span></div>
+      </div>
+      <div class="wiz-bar"><div class="wiz-bar-fill" id="wizBarFill"></div></div>
+
+      <div class="wiz-panels">
+        <!-- STEP 1 -->
+        <div class="wiz-panel active" data-panel="1">
+          <h3 class="wiz-h" data-fr="Choisissez votre sac">Pick your bag</h3>
+          <div class="bagpick">
+            <button type="button" class="bagpick-card selected" data-price="34.99" data-bag="standard">
+              <span class="bagpick-emoji">👕</span>
+              <strong data-fr="Sac standard">Standard bag</strong>
+              <small data-fr="≈ 9 kg · une semaine de linge">≈ 20 lbs · a week of laundry</small>
+              <span class="bagpick-price">$34.99</span>
+            </button>
+            <button type="button" class="bagpick-card" data-price="39.99" data-bag="large">
+              <span class="bagpick-emoji">🛏️</span>
+              <strong data-fr="Grand sac">Large bag</strong>
+              <small data-fr="≈ 14 kg · familles et volumineux">≈ 30 lbs · families &amp; bulky</small>
+              <span class="bagpick-price">$39.99</span>
+            </button>
+          </div>
+          <p class="wiz-hint" data-fr="Un sac par commande. Besoin de plusieurs&nbsp;? Réservez à nouveau ou écrivez-nous.">One bag per order. Need several? Just book again, or message us.</p>
+          <div class="wiz-nav">
+            <span class="wiz-total"><span data-fr="Total">Total</span> <strong id="wTotal">$34.99</strong></span>
+            <button type="button" class="btn btn-primary" data-next="2" data-fr="Continuer →">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="wiz-panel" data-panel="2">
+          <h3 class="wiz-h" data-fr="Où et quand&nbsp;?">Where &amp; when?</h3>
+          <div class="wiz-row">
+            <label class="wiz-field" style="grid-column:1 / span 1">
+              <span data-fr="Adresse de collecte">Pickup address</span>
+              <input type="text" id="wAddress" placeholder="123 Rue Saint-Denis, Montréal" autocomplete="street-address">
+            </label>
+            <label class="wiz-field">
+              <span data-fr="App. / unité (optionnel)">Apt / unit (optional)</span>
+              <input type="text" id="wUnit" placeholder="Apt 4" autocomplete="address-line2">
+            </label>
+          </div>
+          <div class="wiz-row">
+            <label class="wiz-field">
+              <span data-fr="Date">Date</span>
+              <input type="date" id="wDate">
+            </label>
+            <div class="wiz-field">
+              <span data-fr="Plage horaire">Time window</span>
+              <div class="chips" id="wTime">
+                <button type="button" class="chip" data-val="9-11 AM">9–11 AM</button>
+                <button type="button" class="chip" data-val="11-1 PM">11–1 PM</button>
+                <button type="button" class="chip" data-val="1-3 PM">1–3 PM</button>
+                <button type="button" class="chip" data-val="3-5 PM">3–5 PM</button>
+              </div>
+            </div>
+          </div>
+          <label class="wiz-field">
+            <span data-fr="Instructions de collecte (optionnel)">Pickup notes (optional)</span>
+            <input type="text" id="wNotes" placeholder="Buzz 202, leave at door…">
+          </label>
+          <p class="wiz-err" id="wErr2" hidden data-fr="Merci de remplir l'adresse, la date et l'heure.">Please add your address, date and a time window.</p>
+          <div class="wiz-nav">
+            <button type="button" class="btn btn-outline" data-back="1" data-fr="← Retour">← Back</button>
+            <button type="button" class="btn btn-primary" data-next="3" data-fr="Continuer →">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="wiz-panel" data-panel="3">
+          <h3 class="wiz-h" data-fr="Presque fini&nbsp;!">Almost done!</h3>
+          <label class="wiz-field"><span data-fr="Nom complet">Full name</span><input type="text" id="wName" autocomplete="name" placeholder="Marie Tremblay"></label>
+          <div class="wiz-row">
+            <label class="wiz-field"><span data-fr="Courriel">Email</span><input type="email" id="wEmail" autocomplete="email" placeholder="marie@email.com"></label>
+            <label class="wiz-field"><span data-fr="Téléphone">Phone</span><input type="tel" id="wPhone" autocomplete="tel" placeholder="(514) 555-0123"></label>
+          </div>
+          <div class="wiz-summary" id="wSummary"></div>
+          <p class="wiz-err" id="wErr3" hidden data-fr="Merci de remplir votre nom, courriel et téléphone.">Please add your name, email and phone.</p>
+          <div class="wiz-nav">
+            <button type="button" class="btn btn-outline" data-back="2" data-fr="← Retour">← Back</button>
+            <button type="button" class="btn btn-primary" id="wSubmit" data-fr="Réserver et payer →">Reserve &amp; Pay →</button>
+          </div>
+          <p class="wiz-secure" data-fr="🔒 Paiement sécurisé par Stripe · aucun débit avant confirmation">🔒 Secured by Stripe · no charge until confirmed</p>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="wiz-panel wiz-success" data-panel="done">
+          <div class="wiz-success-emoji">🎉</div>
+          <h3 data-fr="C'est réservé&nbsp;!">You're booked!</h3>
+          <p id="wDoneMsg">We're taking you to secure payment…</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -674,9 +813,10 @@
   </div>
 </footer>
 
-<a href="#download" class="floating-cta" id="floatingCta" data-fr="📱 Obtenir l'app">📱 Get the app</a>
+<a href="#book" class="floating-cta" id="floatingCta" data-fr="🧺 Réserver">🧺 Book a pickup</a>
+<div class="toast-stack" id="toastStack" aria-hidden="true"></div>
 
-<script src="js/app.js?v=4"></script>
+<script src="js/app.js?v=9"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
