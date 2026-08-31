@@ -62,7 +62,9 @@ module.exports = async (req, res) => {
         const map = `https://maps.google.com/?q=${encodeURIComponent(pickup_address)}`;
         const text =
           `🧺 *New Washly web order*\n` +
-          `👤 ${customer_name} — ${customer_phone}\n` +
+          `👤 ${customer_name}\n` +
+          `📞 ${customer_phone}\n` +
+          `✉️ ${customer_email}\n` +
           `📦 ${bag_size} bag\n` +
           `📍 ${pickup_address}${apartment_unit ? " #" + apartment_unit : ""}\n🗺 ${map}\n` +
           `🗓 ${pickup_date} · ${pickup_time_range}\n💳 heading to payment`;
