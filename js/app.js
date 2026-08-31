@@ -240,77 +240,6 @@
     updateProgress();
   }
 
-  /* ── Instant quote widget ────────────────── */
-  const qCount = document.getElementById("qCount");
-  const qTotal = document.getElementById("qTotal");
-  const qSeg = document.getElementById("qSeg");
-  if (qCount && qTotal && qSeg) {
-    let count = 1;
-    let price = 34.99;
-    const fmt = (n) =>
-      document.documentElement.lang === "fr"
-        ? n.toFixed(2).replace(".", ",") + " $"
-        : "$" + n.toFixed(2);
-    const render = () => {
-      qCount.textContent = count;
-      qTotal.textContent = fmt(price * count);
-    };
-    qSeg.addEventListener("click", (e) => {
-      const btn = e.target.closest(".seg-btn");
-      if (!btn) return;
-      qSeg.querySelectorAll(".seg-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      price = parseFloat(btn.dataset.price);
-      render();
-    });
-    document.getElementById("qPlus").addEventListener("click", () => {
-      count = Math.min(count + 1, 8);
-      render();
-    });
-    document.getElementById("qMinus").addEventListener("click", () => {
-      count = Math.max(count - 1, 1);
-      render();
-    });
-    // re-render on language switch so currency format follows
-    const lt = document.getElementById("langToggle");
-    if (lt) lt.addEventListener("click", () => setTimeout(render, 0));
-    render();
-  }
-
-  /* ── Live social-proof toasts ────────────── */
-  const toastStack = document.getElementById("toastStack");
-  if (toastStack && !reducedMotion) {
-    const areas = ["Le Plateau", "Mile End", "Griffintown", "Verdun", "NDG", "Outremont", "Rosemont", "Villeray", "Saint-Henri", "Westmount", "Côte-des-Neiges", "Ville-Marie"];
-    const mins = () => Math.floor(Math.random() * 12) + 2;
-    const msg = () => {
-      const area = areas[Math.floor(Math.random() * areas.length)];
-      const fr = document.documentElement.lang === "fr";
-      const emojis = ["🧺", "✨", "🚗", "💚"];
-      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-      const actionEn = ["just booked a pickup", "scheduled a 24h wash", "got fresh laundry delivered"][Math.floor(Math.random() * 3)];
-      const actionFr = ["vient de réserver une collecte", "a planifié un lavage 24h", "a reçu son linge frais"][Math.floor(Math.random() * 3)];
-      return {
-        emoji,
-        title: fr ? `Quelqu'un à ${area}` : `Someone in ${area}`,
-        sub: fr ? `${actionFr} · il y a ${mins()} min` : `${actionEn} · ${mins()} min ago`,
-      };
-    };
-    const show = () => {
-      const d = msg();
-      const el = document.createElement("div");
-      el.className = "toast";
-      el.innerHTML = `<span class="toast-emoji">${d.emoji}</span><span class="toast-body"><strong>${d.title}</strong><small>${d.sub}</small></span>`;
-      toastStack.appendChild(el);
-      setTimeout(() => el.classList.add("show"), 40);
-      setTimeout(() => {
-        el.classList.remove("show");
-        setTimeout(() => el.remove(), 600);
-      }, 5000);
-    };
-    setTimeout(show, 4000);
-    setInterval(show, 11000);
-  }
-
   /* ── Booking wizard ──────────────────────── */
   const wizard = document.getElementById("wizard");
   if (wizard) {
@@ -458,21 +387,6 @@
           : "We've got your request — we'll reach out to finalize. Thank you!");
       }
     });
-
-    // prefill from the instant-quote widget
-    const quoteReserve = document.getElementById("quoteReserve");
-    if (quoteReserve) {
-      quoteReserve.addEventListener("click", () => {
-        const activeSeg = document.querySelector("#qSeg .seg-btn.active");
-        if (activeSeg) {
-          const price = parseFloat(activeSeg.dataset.price);
-          const bag = price >= 39 ? "large" : "standard";
-          wizard.querySelectorAll(".bagpick-card").forEach((c) => c.classList.toggle("selected", c.dataset.bag === bag));
-          state.bag = bag; state.price = price;
-          renderTotals();
-        }
-      });
-    }
 
     // re-render currency/summary on language switch
     const lt2 = document.getElementById("langToggle");

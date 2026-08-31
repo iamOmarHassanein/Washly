@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=9">
+<link rel="stylesheet" href="css/styles.css?v=10">
 <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
@@ -125,33 +125,6 @@
   </div>
 </div>
 
-<!-- ══════════════ INSTANT QUOTE ══════════════ -->
-<section class="quote-section" id="quote">
-  <div class="container">
-    <div class="quote-card2 reveal">
-      <span class="eyebrow" data-fr="Prix instantané">Instant price</span>
-      <h2 data-fr="Votre prix en <span class='grad-text'>5 secondes.</span>">Your price in <span class="grad-text">5 seconds.</span></h2>
-      <div class="quote-controls">
-        <div class="seg" id="qSeg">
-          <button type="button" class="seg-btn active" data-price="34.99" data-fr="Sac standard · 34,99 $">Standard bag · $34.99</button>
-          <button type="button" class="seg-btn" data-price="39.99" data-fr="Grand sac · 39,99 $">Large bag · $39.99</button>
-        </div>
-        <div class="stepper">
-          <button type="button" class="step-btn" id="qMinus" aria-label="Fewer bags">−</button>
-          <span class="step-val"><span id="qCount">1</span>&nbsp;<span data-fr="sac(s)">bag(s)</span></span>
-          <button type="button" class="step-btn" id="qPlus" aria-label="More bags">+</button>
-        </div>
-      </div>
-      <div class="quote-total">
-        <span class="quote-total-label" data-fr="Votre total">Your total</span>
-        <span class="quote-amount" id="qTotal">$34.99</span>
-      </div>
-      <p class="quote-perks" data-fr="✓ Collecte et livraison gratuites&nbsp;&nbsp;✓ Frais en 24h&nbsp;&nbsp;✓ Aucun paiement maintenant">✓ Free pickup &amp; delivery&nbsp;&nbsp;✓ Fresh in 24h&nbsp;&nbsp;✓ No payment now</p>
-      <a href="#book" class="btn btn-primary btn-lg btn-block" id="quoteReserve" data-fr="Réserver ma collecte →">Reserve my pickup →</a>
-      <p class="quote-note" data-fr="Vous lavez souvent ? Économisez jusqu'à 30 % avec un forfait ci-dessous.">Wash often? Save up to 30% with a plan below.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════ HOW IT WORKS ══════════════ -->
 <section class="section" id="how">
@@ -406,6 +379,7 @@
       <span class="eyebrow" data-fr="Réservez en 3 étapes">Book in 3 steps</span>
       <h2 data-fr="Votre linge, <span class='grad-text'>récupéré aujourd'hui.</span>">Your laundry, <span class="grad-text">picked up today.</span></h2>
       <p data-fr="Moins de 60 secondes. Aucun compte requis.">Under 60 seconds. No account needed.</p>
+      <p class="book-alt reveal" data-fr="Remplissez ci-dessous, ou <a href='https://apps.apple.com/ca/app/washly-mtl/id6761146858' target='_blank' rel='noopener noreferrer'>téléchargez l'app</a> — au choix.">Fill it out below, or <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer">download the app</a> — whichever's easier.</p>
     </div>
 
     <div class="wizard reveal d1" id="wizard">
@@ -422,13 +396,13 @@
           <h3 class="wiz-h" data-fr="Choisissez votre sac">Pick your bag</h3>
           <div class="bagpick">
             <button type="button" class="bagpick-card selected" data-price="34.99" data-bag="standard">
-              <span class="bagpick-emoji">👕</span>
+              <span class="bagpick-bag"><img src="assets/laundry-bag.png" alt="" class="bagimg bagimg-sm"></span>
               <strong data-fr="Sac standard">Standard bag</strong>
               <small data-fr="≈ 9 kg · une semaine de linge">≈ 20 lbs · a week of laundry</small>
               <span class="bagpick-price">$34.99</span>
             </button>
             <button type="button" class="bagpick-card" data-price="39.99" data-bag="large">
-              <span class="bagpick-emoji">🛏️</span>
+              <span class="bagpick-bag"><img src="assets/laundry-bag.png" alt="" class="bagimg bagimg-lg"></span>
               <strong data-fr="Grand sac">Large bag</strong>
               <small data-fr="≈ 14 kg · familles et volumineux">≈ 30 lbs · families &amp; bulky</small>
               <span class="bagpick-price">$39.99</span>
@@ -814,9 +788,8 @@
 </footer>
 
 <a href="#book" class="floating-cta" id="floatingCta" data-fr="🧺 Réserver">🧺 Book a pickup</a>
-<div class="toast-stack" id="toastStack" aria-hidden="true"></div>
 
-<script src="js/app.js?v=9"></script>
+<script src="js/app.js?v=10"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
