@@ -1097,3 +1097,10 @@ a.area-chip { text-decoration: none; }
 @media (max-width: 620px) {
   .book-choices { grid-template-columns: 1fr; max-width: 420px; }
 }
+
+.book-number {
+  margin-top: auto; font-family: var(--font-display); font-weight: 900;
+  font-size: 1.5rem; color: var(--lime-deep); letter-spacing: .01em;
+  background: var(--lime-soft); border: 1.5px solid rgba(122,154,30,.28);
+  border-radius: 14px; padding: 14px 20px; width: 100%; text-align: center;
+}
