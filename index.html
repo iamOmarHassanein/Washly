@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=10">
+<link rel="stylesheet" href="css/styles.css?v=11">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 <link rel="manifest" href="/manifest.json">
@@ -429,112 +429,32 @@
   </div>
 </section>
 
-<!-- ══════════════ BOOKING FLOW ══════════════ -->
+<!-- ══════════════ BOOK ══════════════ -->
 <section class="section booking-flow" id="book">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow" data-fr="Réservez en 3 étapes">Book in 3 steps</span>
-      <h2 data-fr="Votre linge, <span class='grad-text'>récupéré aujourd'hui.</span>">Your laundry, <span class="grad-text">picked up today.</span></h2>
-      <p data-fr="Moins de 60 secondes. Aucun compte requis.">Under 60 seconds. No account needed.</p>
-      <p class="book-alt reveal" data-fr="Remplissez ci-dessous, ou <a href='https://apps.apple.com/ca/app/washly-mtl/id6761146858' target='_blank' rel='noopener noreferrer'>téléchargez l'app</a> — au choix.">Fill it out below, or <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer">download the app</a> — whichever's easier.</p>
+      <span class="eyebrow" data-fr="Réserver une collecte">Book a pickup</span>
+      <h2 data-fr="Deux façons simples de <span class='grad-text'>réserver.</span>">Two easy ways to <span class="grad-text">book.</span></h2>
+      <p data-fr="Écrivez-nous ou téléchargez l'app — au choix. Collecte gratuite, frais en 24 h.">Text us or grab the app — whichever's easier. Free pickup, fresh in 24 hours.</p>
     </div>
-
-    <div class="wizard reveal d1" id="wizard">
-      <div class="wiz-steps">
-        <div class="wiz-step active" data-dot="1"><span class="wiz-dot">1</span><span class="wiz-label" data-fr="Votre sac">Your bag</span></div>
-        <div class="wiz-step" data-dot="2"><span class="wiz-dot">2</span><span class="wiz-label" data-fr="Collecte">Pickup</span></div>
-        <div class="wiz-step" data-dot="3"><span class="wiz-dot">3</span><span class="wiz-label" data-fr="Vous">You</span></div>
-      </div>
-      <div class="wiz-bar"><div class="wiz-bar-fill" id="wizBarFill"></div></div>
-
-      <div class="wiz-panels">
-        <!-- STEP 1 -->
-        <div class="wiz-panel active" data-panel="1">
-          <h3 class="wiz-h" data-fr="Choisissez votre sac">Pick your bag</h3>
-          <div class="bagpick">
-            <button type="button" class="bagpick-card selected" data-price="34.99" data-bag="standard">
-              <span class="bagpick-bag"><img src="assets/laundry-bag.png" alt="" class="bagimg bagimg-sm"></span>
-              <strong data-fr="Sac standard">Standard bag</strong>
-              <small data-fr="≈ 9 kg · une semaine de linge">≈ 20 lbs · a week of laundry</small>
-              <span class="bagpick-price">$34.99</span>
-            </button>
-            <button type="button" class="bagpick-card" data-price="39.99" data-bag="large">
-              <span class="bagpick-bag"><img src="assets/laundry-bag.png" alt="" class="bagimg bagimg-lg"></span>
-              <strong data-fr="Grand sac">Large bag</strong>
-              <small data-fr="≈ 14 kg · familles et volumineux">≈ 30 lbs · families &amp; bulky</small>
-              <span class="bagpick-price">$39.99</span>
-            </button>
-          </div>
-          <p class="wiz-hint" data-fr="Un sac par commande. Besoin de plusieurs&nbsp;? Réservez à nouveau ou écrivez-nous.">One bag per order. Need several? Just book again, or message us.</p>
-          <div class="wiz-nav">
-            <span class="wiz-total"><span data-fr="Total">Total</span> <strong id="wTotal">$34.99</strong></span>
-            <button type="button" class="btn btn-primary" data-next="2" data-fr="Continuer →">Continue →</button>
-          </div>
-        </div>
-
-        <!-- STEP 2 -->
-        <div class="wiz-panel" data-panel="2">
-          <h3 class="wiz-h" data-fr="Où et quand&nbsp;?">Where &amp; when?</h3>
-          <div class="wiz-row">
-            <label class="wiz-field" style="grid-column:1 / span 1">
-              <span data-fr="Adresse de collecte">Pickup address</span>
-              <input type="text" id="wAddress" placeholder="123 Rue Saint-Denis, Montréal" autocomplete="street-address">
-            </label>
-            <label class="wiz-field">
-              <span data-fr="App. / unité (optionnel)">Apt / unit (optional)</span>
-              <input type="text" id="wUnit" placeholder="Apt 4" autocomplete="address-line2">
-            </label>
-          </div>
-          <div class="wiz-row">
-            <label class="wiz-field">
-              <span data-fr="Date">Date</span>
-              <input type="date" id="wDate">
-            </label>
-            <div class="wiz-field">
-              <span data-fr="Plage horaire">Time window</span>
-              <div class="chips" id="wTime">
-                <button type="button" class="chip" data-val="9-11 AM">9–11 AM</button>
-                <button type="button" class="chip" data-val="11-1 PM">11–1 PM</button>
-                <button type="button" class="chip" data-val="1-3 PM">1–3 PM</button>
-                <button type="button" class="chip" data-val="3-5 PM">3–5 PM</button>
-              </div>
-            </div>
-          </div>
-          <label class="wiz-field">
-            <span data-fr="Instructions de collecte (optionnel)">Pickup notes (optional)</span>
-            <input type="text" id="wNotes" placeholder="Buzz 202, leave at door…">
-          </label>
-          <p class="wiz-err" id="wErr2" hidden data-fr="Merci de remplir l'adresse, la date et l'heure.">Please add your address, date and a time window.</p>
-          <div class="wiz-nav">
-            <button type="button" class="btn btn-outline" data-back="1" data-fr="← Retour">← Back</button>
-            <button type="button" class="btn btn-primary" data-next="3" data-fr="Continuer →">Continue →</button>
-          </div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="wiz-panel" data-panel="3">
-          <h3 class="wiz-h" data-fr="Presque fini&nbsp;!">Almost done!</h3>
-          <label class="wiz-field"><span data-fr="Nom complet">Full name</span><input type="text" id="wName" autocomplete="name" placeholder="Marie Tremblay"></label>
-          <div class="wiz-row">
-            <label class="wiz-field"><span data-fr="Courriel">Email</span><input type="email" id="wEmail" autocomplete="email" placeholder="marie@email.com"></label>
-            <label class="wiz-field"><span data-fr="Téléphone">Phone</span><input type="tel" id="wPhone" autocomplete="tel" placeholder="(514) 555-0123"></label>
-          </div>
-          <div class="wiz-summary" id="wSummary"></div>
-          <p class="wiz-err" id="wErr3" hidden data-fr="Merci de remplir votre nom, courriel et téléphone.">Please add your name, email and phone.</p>
-          <div class="wiz-nav">
-            <button type="button" class="btn btn-outline" data-back="2" data-fr="← Retour">← Back</button>
-            <button type="button" class="btn btn-primary" id="wSubmit" data-fr="Réserver et payer →">Reserve &amp; Pay →</button>
-          </div>
-          <p class="wiz-secure" data-fr="🔒 Paiement sécurisé par Stripe · aucun débit avant confirmation">🔒 Secured by Stripe · no charge until confirmed</p>
-        </div>
-
-        <!-- SUCCESS -->
-        <div class="wiz-panel wiz-success" data-panel="done">
-          <div class="wiz-success-emoji">🎉</div>
-          <h3 data-fr="C'est réservé&nbsp;!">You're booked!</h3>
-          <p id="wDoneMsg">We're taking you to secure payment…</p>
-        </div>
-      </div>
+    <div class="book-choices reveal d1">
+      <article class="book-choice book-choice-primary">
+        <span class="book-choice-icon">💬</span>
+        <h3 data-fr="Réservez par texto">Book by text</h3>
+        <p data-fr="Envoyez-nous un texto avec votre adresse et l'heure qui vous convient — on confirme votre collecte en quelques minutes.">Send us a text with your address and a time that works — we'll confirm your pickup in minutes.</p>
+        <a href="sms:+12633841103?&body=Hi%20Washly!%20I'd%20like%20to%20book%20a%20laundry%20pickup.%20My%20address%20is%3A%20" class="btn btn-primary btn-lg" data-fr="💬 Nous écrire">💬 Text us to book</a>
+      </article>
+      <article class="book-choice">
+        <span class="book-choice-icon">📱</span>
+        <h3 data-fr="Obtenez l'app">Get the app</h3>
+        <p data-fr="Commandez, suivez et gérez tout dans l'app Washly. Votre première collecte en moins de 2 minutes.">Order, track and manage everything in the Washly app. Your first pickup is under 2 minutes away.</p>
+        <a href="https://apps.apple.com/ca/app/washly-mtl/id6761146858" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" data-fr="📱 Télécharger l'app">📱 Download the app</a>
+      </article>
+    </div>
+    <div class="book-perks reveal d2">
+      <span data-fr="✓ Collecte et livraison gratuites">✓ Free pickup &amp; delivery</span>
+      <span data-fr="✓ Frais et plié en 24h">✓ Fresh &amp; folded in 24h</span>
+      <span data-fr="✓ Aucun compte requis pour texter">✓ No account needed to text</span>
     </div>
   </div>
 </section>
