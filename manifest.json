@@ -1,0 +1,12 @@
+{
+  "name": "Washly MTL — Laundry Pickup & Delivery",
+  "short_name": "Washly",
+  "description": "Laundry pickup and delivery in Montreal. Fresh, folded and back in 24 hours.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C9F53C",
+  "icons": [
+    { "src": "/assets/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
